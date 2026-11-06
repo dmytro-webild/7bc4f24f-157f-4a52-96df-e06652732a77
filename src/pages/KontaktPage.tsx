@@ -229,14 +229,17 @@ export default function KontaktPage() {
           </div>
 
           <div className="relative h-96 rounded-xl overflow-hidden bg-zinc-100 border border-zinc-200">
-            <img
-              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1600&q=80"
-              alt="Karte Bergen im Chiemgau"
-              className="w-full h-full object-cover opacity-85"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-white text-zinc-900 px-6 py-4 rounded-xl shadow-xl border border-zinc-200 text-center space-y-1">
-                <div className="font-bold text-lg text-[#E6007E]">Radsport Derjung (D74)</div>
+            <iframe
+              title="Google Karte Radsport Derjung"
+              src="https://maps.google.com/maps?q=Staudacherstraße%2047,%2083346%20Bergen%20im%20Chiemgau&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              className="w-full h-full border-0"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div className="absolute bottom-4 left-4 pointer-events-none hidden sm:block">
+              <div className="bg-white/95 backdrop-blur-sm text-zinc-900 px-4 py-3 rounded-xl shadow-lg border border-zinc-200 text-left space-y-0.5">
+                <div className="font-bold text-sm text-[#E6007E]">Radsport Derjung (D74)</div>
                 <div className="text-xs text-zinc-600">Staudacherstraße 47 · 83346 Bergen</div>
               </div>
             </div>
