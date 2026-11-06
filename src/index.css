@@ -1,25 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 @import "./styles/masks.css";
 @import "./styles/animations.css";
 
 :root {
-  /* @colorThemes/lightTheme/grayNavyBlue */
-  --background: #f5faff;
+  /* Radsport Derjung Theme Tokens */
+  --background: #f4f7fa;
   --card: #ffffff;
-  --foreground: #001122;
-  --primary-cta: #15479c;
-  --primary-cta-text: #f5faff;
-  --secondary-cta: #ffffff;
-  --secondary-cta-text: #001122;
-  --accent: #a8cce8;
-  --background-accent: #7ba3cf;
+  --foreground: #0a1324;
+  --primary-cta: #0056c6;
+  --primary-cta-text: #ffffff;
+  --secondary-cta: #0a1324;
+  --secondary-cta-text: #ffffff;
+  --accent: #facc15;
+  --accent-hover: #eab308;
+  --background-accent: #e0eaf6;
 
   /* @layout/border-radius/rounded */
-  --radius: 0.5rem;
+  --radius: 0.375rem;
 
   /* @layout/content-width/medium */
-  --width-content-width: clamp(40rem, 72.5vw, 100rem);
+  --width-content-width: clamp(40rem, 78vw, 100rem);
 
   /* @utilities/masks */
   --vw-1_5: 1.5vw;
@@ -66,7 +67,7 @@
     --text-7xl: 10vw;
     --text-8xl: 12vw;
     --text-9xl: 14vw;
-    --width-content-width: 80vw;
+    --width-content-width: 90vw;
     --width-carousel-padding: calc((100vw - var(--width-content-width)) / 2 + 1px - 1rem);
     --width-carousel-padding-controls: calc((100vw - var(--width-content-width)) / 2 + 1px);
     --width-carousel-item-2: var(--width-content-width);
@@ -89,8 +90,8 @@
 
   /* Fonts */
   --font-sans: 'Figtree', sans-serif;
-  --font-tight: "Inter Tight", sans-serif;
-  --font-mono: monospace;
+  --font-race: 'Barlow Condensed', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
   /* Border Radius */
   --radius: var(--radius);
@@ -125,7 +126,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 1) rgba(255, 255, 255, 0);
+  scrollbar-color: rgba(0, 85, 198, 0.3) rgba(240, 244, 248, 1);
 }
 
 html {
@@ -150,37 +151,93 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Figtree', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: italic;
+  letter-spacing: -0.02em;
 }
 
-/* Default card/button styles. Template theme.css imports come after this file
-   in template routes, so template-specific styles win there. */
+/* Custom background pattern: Höhenlinien / Topo Map */
+.bg-topo {
+  background-color: var(--background);
+  background-image: radial-gradient(ellipse at center, rgba(0, 85, 198, 0.04) 0%, transparent 70%),
+    repeating-linear-gradient(45deg, rgba(0, 85, 198, 0.025) 0, rgba(0, 85, 198, 0.025) 1px, transparent 0, transparent 24px),
+    repeating-linear-gradient(-45deg, rgba(0, 85, 198, 0.015) 0, rgba(0, 85, 198, 0.015) 1px, transparent 0, transparent 36px);
+}
+
+/* Spec sheet / Datenblatt styling */
+.datenblatt-box {
+  background-color: #ffffff;
+  border: 1px solid rgba(10, 19, 36, 0.12);
+  box-shadow: 0 4px 20px -2px rgba(10, 19, 36, 0.05);
+}
+
+.datenblatt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem 1rem;
+  border-bottom: 1px solid rgba(10, 19, 36, 0.08);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.datenblatt-row:last-child {
+  border-bottom: none;
+}
+
+.startnummer-badge {
+  background: #ffffff;
+  border: 2px solid #0a1324;
+  border-top: 6px solid #0056c6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
 
 .card {
-  /* WEBILD_CARD_STYLE */
-  /* @cards/inner-glow */
   background: var(--color-card);
-  box-shadow: inset 0 0 30px 0 color-mix(in srgb, var(--color-foreground) 4%, transparent), inset 0 1px 0 0 color-mix(in srgb, var(--color-foreground) 8%, transparent), 0 4px 12px -4px color-mix(in srgb, var(--color-foreground) 8%, transparent);
+  border: 1px solid rgba(10, 19, 36, 0.08);
+  box-shadow: 0 4px 14px rgba(10, 19, 36, 0.04);
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  border-color: rgba(0, 85, 198, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 85, 198, 0.08);
 }
 
 .primary-button {
-  /* WEBILD_PRIMARY_BUTTON */
-  /* @primaryButtons/neon-outline */
   background: var(--color-primary-cta);
-  box-shadow: 0 0 5px color-mix(in srgb, var(--color-accent) 50%, transparent), 0 0 15px color-mix(in srgb, var(--color-accent) 30%, transparent), 0 0 30px color-mix(in srgb, var(--color-accent) 15%, transparent), inset 0 0 8px color-mix(in srgb, var(--color-accent) 10%, transparent);
+  color: var(--color-primary-cta-text);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 85, 198, 0.25);
+  transition: all 0.2s ease-in-out;
+}
+
+.primary-button:hover {
+  background: #0045a3;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 85, 198, 0.35);
 }
 
 .secondary-button {
-  /* WEBILD_SECONDARY_BUTTON */
-  /* @secondaryButtons/layered */
-  background:
-    linear-gradient(color-mix(in srgb, var(--color-accent) 5%, transparent) 0%, transparent 59.26%),
-    linear-gradient(var(--color-secondary-cta), var(--color-secondary-cta)),
-    linear-gradient(var(--color-secondary-cta), var(--color-secondary-cta)),
-    linear-gradient(color-mix(in srgb, var(--color-accent) 5%, transparent) 0%, transparent 59.26%),
-    linear-gradient(color-mix(in srgb, var(--color-secondary-cta) 60%, transparent), color-mix(in srgb, var(--color-secondary-cta) 60%, transparent)),
-    var(--color-secondary-cta);
-  box-shadow:
-    2.10837px 3.16256px 9.48767px color-mix(in srgb, var(--color-accent) 10%, transparent);
+  background: var(--color-secondary-cta);
+  color: var(--color-secondary-cta-text);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   border: 1px solid var(--color-secondary-cta);
+  transition: all 0.2s ease-in-out;
+}
+
+.secondary-button:hover {
+  background: #17253d;
+  transform: translateY(-1px);
 }
