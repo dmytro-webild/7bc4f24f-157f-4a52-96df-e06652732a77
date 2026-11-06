@@ -1,214 +1,378 @@
 import React from 'react';
-import ScrollReveal from '@/components/ui/ScrollReveal';
 import { Link } from 'react-router-dom';
+import ScrollReveal from '@/components/ui/ScrollReveal';
+import { ArrowRight, ChevronRight } from 'lucide-react';
 
 export default function WirPage() {
   const timelineEvents = [
     {
-      year: '1986',
-      title: 'Gründung in Bergen im Chiemgau',
-      desc: 'Hans Derjung gründet die Werkstatt D74 in Bergen. Was als leidenschaftlicher Service für lokale Rennfahrer begann, wuchs rasch zu einer festen Institution im Chiemgau.',
+      year: '1986 (März)',
+      desc: 'Erste Radrennen in der Schülerklasse, danach aktive Laufbahn auf Straße, Bahn und Mountainbike.',
+      isCurrent: false,
     },
     {
-      year: '1995',
-      title: 'Meisterbrief & Erweiterung',
-      desc: 'Mit dem Meisterbrief im Zweiradmechaniker-Handwerk und dem Neubau des Showrooms wird der Grundstein für hochspezialisierten Custom-Aufbau gelegt.',
+      year: '1999',
+      desc: 'Gründung von M BIKE, erste Radstation auf Mallorca mit Verleih und MTB-Touren.',
+      isCurrent: false,
     },
     {
-      year: '2008',
-      title: 'Gravel & Mountainbike Pionier',
-      desc: 'Erweiterung des Sortiments um führende MTB- und Gravelbike-Marken für die anspruchsvollen Strecken der Chiemgauer Alpen.',
+      year: '2003',
+      desc: 'Eröffnung einer weiteren Radstation.',
+      isCurrent: false,
     },
     {
-      year: '2018',
-      title: 'E-Performance & Dienstrad-Leasing',
-      desc: 'Einführung von High-Tech Diagnosestationen für Bosch- und Shimano-Antriebe sowie Partnerschaften mit führenden Leasing-Anbietern.',
+      year: '2006',
+      desc: 'Organisation und Betreuung der Shimano XTR Präsentation auf Mallorca.',
+      isCurrent: false,
+    },
+    {
+      year: '2006–08',
+      desc: 'Transalp 2006 und 2008, Transgermany 2007.',
+      isCurrent: false,
+    },
+    {
+      year: '2008/09',
+      desc: 'MTB-Berater für Zillertal Tourismus, Organisation der Zillertal Bikechallenge 2009.',
+      isCurrent: false,
+    },
+    {
+      year: '2010 (Januar)',
+      desc: 'Eigener Laden in Marquartstein.',
+      isCurrent: false,
+    },
+    {
+      year: '2016',
+      desc: 'Umbenennung von M BIKE in D74 Radsport Derjung.',
+      isCurrent: false,
+    },
+    {
+      year: '2024',
+      desc: 'Xaver beginnt seine Lehre im Betrieb, die zweite Generation.',
+      isCurrent: false,
     },
     {
       year: 'Heute',
-      title: 'Tradition & Moderne vereint',
-      desc: 'Seit fast 40 Jahren bieten wir euch persönliche Beratung, modernste Werkstatt-Technik und unbändige Begeisterung für den Radsport.',
+      desc: 'Laden und Werkstatt in Bergen',
+      isCurrent: true,
     },
   ];
 
-  const team = [
+  const impressions = [
     {
-      name: 'Hans Derjung',
-      role: 'Gründer & Zweiradmechaniker-Meister',
-      desc: 'Über 38 Jahre Erfahrung auf und neben der Rennstrecke. Hans berät euch mit fundierter Fachkenntnis und Leidenschaft.',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80',
+      title: 'Team Impressionen',
+      link: '#team',
+      image: 'https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=1000&q=80',
     },
     {
-      name: 'Florian Derjung',
-      role: 'Werkstattleiter & E-Bike Specialist',
-      desc: 'Experte für elektronische Schaltungen, Fahrwerksabstimmungen und Diagnostik moderner E-Bike-Systeme.',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80',
+      title: 'Store Impressionen',
+      link: '/shop',
+      image: 'https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=1000&q=80',
     },
     {
-      name: 'Michael Huber',
-      role: 'Verkaufsberatung & Bikefitting',
-      desc: 'Sorgt für das optimale Zusammenspiel von Ergonomie und Bike-Geometrie für beschwerdefreies Fahren.',
-      image: 'https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=800&q=80',
+      title: 'Bikestation Impressionen',
+      link: '/bikestation',
+      image: 'https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=1000&q=80',
     },
   ];
 
   return (
-    <div className="space-y-24 pb-24 bg-white text-zinc-900">
-      {/* HERO SECTION */}
-      <section className="relative min-h-[50vh] flex items-center justify-center bg-zinc-900 text-white overflow-hidden py-20">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=2000&q=80"
-            alt="Über uns Radsport Derjung"
-            className="w-full h-full object-cover opacity-35"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent"></div>
-        </div>
-
-        <div className="relative z-10 max-w-[100rem] mx-auto px-4 lg:px-8 w-full text-center md:text-left">
+    <div className="bg-white text-zinc-900 min-h-screen">
+      {/* 1. KOPFSECTION */}
+      <section className="pt-12 pb-16 md:pt-16 md:pb-24">
+        <div className="w-content-width mx-auto px-4 lg:px-8">
           <ScrollReveal variant="slide-up">
-            <div className="max-w-3xl space-y-4">
-              <span className="bg-[#E6007E] text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-sm inline-block">
-                Über Radsport Derjung
+            <div className="max-w-4xl space-y-3">
+              <span className="text-zinc-500 font-bold uppercase tracking-wider text-xs md:text-sm">
+                D74 · Radsport Derjung
               </span>
-              <h1 className="text-5xl md:text-7xl font-black tracking-tight text-white">
-                Wir über uns
+              <h1 className="text-5xl md:text-7xl font-black tracking-tight text-zinc-950 leading-[1.05]">
+                Seit 1986 dreht sich alles ums Rad
               </h1>
-              <p className="text-zinc-300 text-lg md:text-xl leading-relaxed">
-                Leidenschaft für Mechanik, Präzision im Detail und echte Beratung im Chiemgau seit 1986.
+              <p className="text-zinc-600 text-lg md:text-xl leading-relaxed pt-2 max-w-3xl">
+                Aus den ersten Schülerrennen wurde eine Leidenschaft und daraus ein Familienbetrieb mit Laden und Werkstatt in Bergen.
               </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal variant="fade-blur" delay={150}>
+            <div className="mt-10 relative aspect-[21/9] rounded-[24px] overflow-hidden shadow-sm bg-zinc-100">
+              <img
+                src="https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=2000&q=80"
+                alt="D74 Radsport Derjung seit 1986"
+                className="w-full h-full object-cover"
+              />
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* TEXT-BILD ABSCHNITTE */}
-      <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
-        <ScrollReveal variant="fade-blur">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative rounded-2xl overflow-hidden shadow-lg h-[500px]">
-              <img
-                src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80"
-                alt="Werkstatt Bergen"
-                className="w-full h-full object-cover"
-              />
+      {/* 2. UNSERE GESCHICHTE (ZEITSTRAHL) */}
+      <section className="py-16 md:py-24 border-t border-zinc-100">
+        <div className="w-content-width mx-auto px-4 lg:px-8">
+          <ScrollReveal variant="slide-up">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-center text-zinc-950 mb-16 md:mb-20">
+              Unsere Geschichte
+            </h2>
+          </ScrollReveal>
+
+          {/* Timeline Container */}
+          <div className="relative max-w-5xl mx-auto">
+            {/* Vertical Line: left side on mobile (left-5), center on desktop (md:left-1/2) */}
+            <div className="absolute top-3 bottom-3 left-5 md:left-1/2 w-0.5 bg-zinc-200 -translate-x-1/2" />
+
+            <div className="space-y-10 md:space-y-12">
+              {timelineEvents.map((event, idx) => {
+                const isEven = idx % 2 === 1; // odd index = right side on desktop
+                return (
+                  <ScrollReveal key={event.year} variant="slide-up" delay={idx * 50}>
+                    <div className="relative flex flex-col md:flex-row items-start">
+                      {/* Timeline Dot */}
+                      <div
+                        className={`absolute left-5 md:left-1/2 -translate-x-1/2 top-1.5 w-4 h-4 rounded-full z-10 transition-colors ${
+                          event.isCurrent
+                            ? 'bg-[#E6007E] border-2 border-[#E6007E] ring-4 ring-[#E6007E]/20'
+                            : 'bg-white border-2 border-[#E6007E]'
+                        }`}
+                      />
+
+                      {/* Content Box */}
+                      <div
+                        className={`pl-12 md:pl-0 w-full md:w-[calc(50%-2.5rem)] ${
+                          isEven
+                            ? 'md:ml-auto md:pl-0 md:text-left'
+                            : 'md:mr-auto md:pr-0 md:text-right'
+                        }`}
+                      >
+                        <div
+                          className={`p-6 bg-white rounded-2xl border border-zinc-200/80 shadow-sm transition-all hover:border-[#E6007E]/40 ${
+                            event.isCurrent ? 'border-[#E6007E] bg-pink-50/20' : ''
+                          }`}
+                        >
+                          <div
+                            className={`text-2xl md:text-3xl font-black mb-1 ${
+                              event.isCurrent ? 'text-[#E6007E]' : 'text-zinc-950'
+                            }`}
+                          >
+                            {event.year}
+                          </div>
+                          <p
+                            className={`text-base md:text-lg leading-relaxed ${
+                              event.isCurrent
+                                ? 'text-[#E6007E] font-medium'
+                                : 'text-zinc-600'
+                            }`}
+                          >
+                            {event.desc}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </ScrollReveal>
+                );
+              })}
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="space-y-6">
-              <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest">
-                Unsere Philosophie
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black tracking-tight">
-                Ein Fahrrad ist erst perfekt, wenn es zu euch passt.
-              </h2>
-              <p className="text-zinc-600 text-base leading-relaxed">
-                Bei Radsport Derjung geht es nicht nur um den Verkauf von Fahrrädern, sondern darum, dass ihr bei jeder Fahrt das beste Gefühl erlebt. Wir beraten euch ohne Hektik und gehen genau auf eure Wünsche und Anforderungen ein.
-              </p>
-              <p className="text-zinc-600 text-base leading-relaxed">
-                Ob sportlicher Rennradfahrer, Mountainbiker in den Chiemgauer Alpen oder Freizeitradler – wir unterstützen euch mit Fachkompetenz und Leidenschaft.
-              </p>
+      {/* 3. HELLGRAUER ABSCHNITT (ZITAT & TEXT) */}
+      <section className="py-20 bg-zinc-100">
+        <div className="w-content-width mx-auto px-4 lg:px-8">
+          <ScrollReveal variant="fade-blur">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+              <div>
+                <blockquote className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-zinc-950 leading-tight">
+                  <span className="text-[#E6007E]">“</span>Nur Sachen, die ich auch selbst kaufen würde<span className="text-[#E6007E]">”</span>
+                </blockquote>
+              </div>
+              <div>
+                <p className="text-zinc-600 text-lg md:text-xl leading-relaxed">
+                  Was sich im harten Bikestationseinsatz über Jahre bewährt hat, kann ruhigen Gewissens verkauft werden. Viele Artikel nutzen wir selbst. Nicht jedem Trend muss man hinterherlaufen, wir setzen auf Bewährtes.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
 
-              <div className="grid grid-cols-2 gap-6 pt-4 border-t border-zinc-200">
-                <div>
-                  <div className="text-3xl font-black text-[#E6007E]">38+</div>
-                  <div className="text-xs font-bold text-zinc-500 uppercase tracking-wider mt-1">Jahre Erfahrung</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-black text-[#E6007E]">100%</div>
-                  <div className="text-xs font-bold text-zinc-500 uppercase tracking-wider mt-1">Meisterwerkstatt</div>
+      {/* 4. BILD LINKS, TEXT RECHTS (BETREUUNG UND SERVICE) */}
+      <section className="py-20 md:py-28">
+        <div className="w-content-width mx-auto px-4 lg:px-8">
+          <ScrollReveal variant="fade-blur">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="relative aspect-[4/3] rounded-[24px] overflow-hidden shadow-sm bg-zinc-100">
+                <img
+                  src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80"
+                  alt="Betreuung und Service bei Radsport Derjung"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="space-y-6">
+                <h2 className="text-3xl md:text-5xl font-black tracking-tight text-zinc-950">
+                  Betreuung und Service
+                </h2>
+                <p className="text-zinc-600 text-lg md:text-xl leading-relaxed">
+                  Service und Beratung auch für Bikes, die nicht bei uns gekauft wurden.
+                </p>
+                <div className="pt-2">
+                  <Link
+                    to="/werkstatt"
+                    className="primary-button inline-flex items-center gap-2"
+                  >
+                    Zur Werkstatt <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
               </div>
             </div>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+        </div>
       </section>
 
-      {/* PORTRÄT / TEAM ABSCHNITT */}
-      <section className="bg-zinc-50 py-20 border-y border-zinc-200">
-        <div className="max-w-[100rem] mx-auto px-4 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest">
-              Porträts & Mannschaft
-            </span>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight">
-              Eure Ansprechpartner in Bergen
-            </h2>
-            <p className="text-zinc-600 text-sm md:text-base">
-              Hinter Radsport Derjung steht ein engagiertes Team von Radsportlern und Technikern.
-            </p>
-          </div>
+      {/* 5. TEXT LINKS, BILD RECHTS (NÄHE ZUR INDUSTRIE) */}
+      <section className="py-20 md:py-28 border-t border-zinc-100">
+        <div className="w-content-width mx-auto px-4 lg:px-8">
+          <ScrollReveal variant="fade-blur">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="space-y-6 order-2 lg:order-1">
+                <h2 className="text-3xl md:text-5xl font-black tracking-tight text-zinc-950">
+                  Nähe zur Industrie
+                </h2>
+                <p className="text-zinc-600 text-lg md:text-xl leading-relaxed">
+                  Durch die enge Zusammenarbeit mit CUBE konnten wir Neuheiten testen und haben Fotoshootings im Zillertal, Händler- und Presseevents sowie Testcamps mitorganisiert.
+                </p>
+              </div>
+              <div className="relative aspect-[4/3] rounded-[24px] overflow-hidden shadow-sm bg-zinc-100 order-1 lg:order-2">
+                <img
+                  src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80"
+                  alt="Zusammenarbeit mit CUBE und Events"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member) => (
-              <div key={member.name} className="card overflow-hidden flex flex-col">
-                <div className="relative h-80 overflow-hidden bg-zinc-100">
+      {/* 6. HELLGRAU: PORTRÄT MARKUS DERJUNG */}
+      <section id="team" className="py-20 md:py-28 bg-zinc-100">
+        <div className="w-content-width mx-auto px-4 lg:px-8">
+          <ScrollReveal variant="fade-blur">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              {/* Hochkantes Porträt links */}
+              <div className="lg:col-span-5">
+                <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-sm bg-zinc-200">
                   <img
-                    src={member.image}
-                    alt={member.name}
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=80"
+                    alt="Markus Derjung Inhaber"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-6 space-y-3 flex-grow flex flex-col justify-between">
+              </div>
+
+              {/* Text und Stats rechts */}
+              <div className="lg:col-span-7 space-y-6">
+                <div>
+                  <h2 className="text-4xl md:text-5xl font-black tracking-tight text-zinc-950">
+                    Markus Derjung
+                  </h2>
+                  <p className="text-zinc-500 text-base md:text-lg font-medium mt-1">
+                    Inhaber · Baujahr 1974 · gelernter Feinmechaniker
+                  </p>
+                </div>
+
+                <p className="text-zinc-600 text-base md:text-lg leading-relaxed">
+                  Mit über 35 Jahren Erfahrung im Radsport verbindet Markus handwerkliche Präzision mit echter Begeisterung. Als gelernter Feinmechaniker sammelte er nach der Ausbildung unter anderem wertvolle Erfahrungen als Profimechaniker bei SG/EC Bayer Köln Worringen in der Radbundesliga. Von 1999 bis 2010 führte er erfolgreich eigene Bikestationen auf Mallorca. Seit 2010 betreibt er seinen eigenen Laden – erst in Marquartstein, heute in Bergen – inzwischen gemeinsam mit seinem Sohn Xaver in zweiter Generation.
+                </p>
+
+                {/* 3 pinke Zahlen */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-zinc-200/80">
                   <div>
-                    <h3 className="text-2xl font-bold">{member.name}</h3>
-                    <div className="text-xs font-bold text-[#E6007E] uppercase tracking-wider mt-0.5">
-                      {member.role}
+                    <div className="text-3xl lg:text-4xl font-black text-[#E6007E]">
+                      35+ Jahre
                     </div>
-                    <p className="text-zinc-600 text-sm mt-3 leading-relaxed">
-                      {member.desc}
-                    </p>
+                    <div className="text-sm font-bold text-zinc-700 mt-1">
+                      Radsport
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-3xl lg:text-4xl font-black text-[#E6007E]">
+                      3×
+                    </div>
+                    <div className="text-sm font-bold text-zinc-700 mt-1">
+                      Transalp und Transgermany
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-3xl lg:text-4xl font-black text-[#E6007E]">
+                      11 Jahre
+                    </div>
+                    <div className="text-sm font-bold text-zinc-700 mt-1">
+                      Bikestationen
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* 7. IMPRESSIONEN */}
+      <section className="py-20 md:py-28">
+        <div className="w-content-width mx-auto px-4 lg:px-8">
+          <ScrollReveal variant="slide-up">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-center text-zinc-950 mb-12 md:mb-16">
+              Impressionen
+            </h2>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {impressions.map((item, idx) => (
+              <ScrollReveal key={item.title} variant="fade-blur" delay={idx * 100}>
+                <Link
+                  to={item.link}
+                  className="group block card overflow-hidden p-0 rounded-[24px] border border-zinc-200/80 transition-all hover:shadow-lg"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden bg-zinc-100">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6 flex items-center justify-between bg-white">
+                    <h3 className="text-xl font-bold text-zinc-950 group-hover:text-[#E6007E] transition-colors">
+                      {item.title}
+                    </h3>
+                    <div className="w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center group-hover:bg-[#E6007E] group-hover:text-white transition-colors">
+                      <ChevronRight className="w-4 h-4" />
+                    </div>
+                  </div>
+                </Link>
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ZEITLEISTE */}
-      <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest">
-            Geschichte & Meilensteine
-          </span>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight">
-            Unsere Zeitleiste
-          </h2>
-        </div>
-
-        <div className="max-w-4xl mx-auto space-y-8">
-          {timelineEvents.map((item) => (
-            <ScrollReveal key={item.year} variant="slide-up">
-              <div className="flex flex-col md:flex-row gap-6 p-8 bg-white border border-zinc-200 rounded-xl hover:border-[#E6007E] transition-colors shadow-sm">
-                <div className="md:w-32 shrink-0">
-                  <span className="text-3xl font-black text-[#E6007E] block">
-                    {item.year}
-                  </span>
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-zinc-900">{item.title}</h3>
-                  <p className="text-zinc-600 text-sm leading-relaxed">{item.desc}</p>
-                </div>
+      {/* 8. ABSCHLUSS */}
+      <section className="py-20 md:py-28 border-t border-zinc-100 bg-zinc-50/50">
+        <div className="w-content-width mx-auto px-4 lg:px-8 text-center">
+          <ScrollReveal variant="slide-up">
+            <div className="max-w-3xl mx-auto space-y-8">
+              <h2 className="text-3xl md:text-5xl font-black tracking-tight text-zinc-950 leading-tight">
+                Wir freuen uns auf euren Besuch, bei dem ihr D74 und unser Angebot kennenlernen könnt.
+              </h2>
+              <div>
+                <Link
+                  to="/kontakt"
+                  className="primary-button inline-flex items-center gap-2 text-base px-8 py-4"
+                >
+                  Kontakt und Anfahrt <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="max-w-[100rem] mx-auto px-4 lg:px-8 text-center pt-8">
-        <div className="bg-zinc-950 text-white rounded-2xl p-12 space-y-6">
-          <h2 className="text-3xl md:text-5xl font-black tracking-tight">
-            Besucht uns in Bergen im Chiemgau
-          </h2>
-          <p className="text-zinc-300 max-w-xl mx-auto text-sm md:text-base">
-            Kommt vorbei und lasst euch persönlich beraten oder vereinbart einen Termin für eure Probefahrt.
-          </p>
-          <div className="pt-2">
-            <Link to="/kontakt" className="primary-button text-base">
-              Jetzt Kontakt aufnehmen
-            </Link>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </div>
