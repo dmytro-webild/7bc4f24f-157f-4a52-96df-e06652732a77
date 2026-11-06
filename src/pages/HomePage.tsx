@@ -482,7 +482,7 @@ export default function HomePage() {
               >
                 <div className="relative h-64 overflow-hidden bg-zinc-100">
                   <img
-                    src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=900&q=80"
+                    src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1793976010880-72z1ymeo.jpg"
                     alt="E-MTB"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
