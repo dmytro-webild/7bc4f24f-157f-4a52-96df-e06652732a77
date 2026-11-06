@@ -47,7 +47,8 @@ export default function Header() {
           {/* Status Label für Öffnungszeiten */}
           <div className="hidden md:inline-flex items-center gap-2 bg-zinc-100/90 border border-zinc-200/80 px-3 py-1 rounded-full text-xs font-medium text-zinc-600">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>Mo–Fr 09:00–18:00 | Sa 09:00–14:00</span>
+            <span>Mi–Fr 09:00–18:00 | Sa 09:00–14:00
+</span>
           </div>
         </div>
 
@@ -191,7 +192,8 @@ export default function Header() {
         <div className="lg:hidden bg-white border-b border-zinc-200 px-6 py-6 space-y-4 font-semibold text-base shadow-xl">
           <div className="inline-flex items-center gap-2 bg-zinc-100 border border-zinc-200 px-3 py-1.5 rounded-full text-xs font-medium text-zinc-600 mb-2">
             <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-            <span>Mo–Fr 09:00–18:00 | Sa 09:00–14:00</span>
+            <span>Mi–Fr 09:00–18:00 | Sa 09:00–14:00
+</span>
           </div>
 
           <div className="space-y-3 pt-2">
