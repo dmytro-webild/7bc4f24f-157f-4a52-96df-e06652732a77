@@ -136,7 +136,8 @@ export default function WerkstattPage() {
             Unsere Werkstatt-Leistungen
           </h2>
           <p className="text-zinc-600 text-sm md:text-base">
-            Faire Festpreise und garantierte Qualität bei jedem Werkstattauftrag.
+            
+
           </p>
         </div>
 
