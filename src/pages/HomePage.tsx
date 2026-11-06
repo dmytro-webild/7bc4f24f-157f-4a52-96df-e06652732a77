@@ -426,7 +426,7 @@ export default function HomePage() {
               >
                 <div className="relative h-64 overflow-hidden bg-zinc-100">
                   <img
-                    src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=80"
+                    src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1793976010883-hw6apxsr.jpg"
                     alt="Gravel"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
