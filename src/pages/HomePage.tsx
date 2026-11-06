@@ -294,7 +294,7 @@ export default function HomePage() {
         <ScrollReveal variant="fade-blur">
           <div className="relative w-full aspect-[21/9] rounded-[24px] overflow-hidden shadow-2xl bg-zinc-100 border border-zinc-200">
             <img
-              src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=2400&q=85"
+              src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1793971463627-8758or4o.jpg"
               alt="Radsport Derjung Chiemgau Touren"
               className="w-full h-full object-cover"
             />
