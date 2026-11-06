@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 @import "./styles/masks.css";
 @import "./styles/animations.css";
@@ -17,10 +17,10 @@
   --background-accent: #f4f4f5;
 
   /* @layout/border-radius/rounded */
-  --radius: 0.5rem;
+  --radius: 1.5rem;
 
   /* @layout/content-width/medium */
-  --width-content-width: clamp(40rem, 78vw, 100rem);
+  --width-content-width: clamp(40rem, 85vw, 100rem);
 
   /* @utilities/masks */
   --vw-1_5: 1.5vw;
@@ -67,7 +67,7 @@
     --text-7xl: 10vw;
     --text-8xl: 12vw;
     --text-9xl: 14vw;
-    --width-content-width: 90vw;
+    --width-content-width: 92vw;
     --width-carousel-padding: calc((100vw - var(--width-content-width)) / 2 + 1px - 1rem);
     --width-carousel-padding-controls: calc((100vw - var(--width-content-width)) / 2 + 1px);
     --width-carousel-item-2: var(--width-content-width);
@@ -89,15 +89,15 @@
   --color-background-accent: var(--background-accent);
 
   /* Fonts */
-  --font-sans: 'Figtree', sans-serif;
-  --font-race: 'Figtree', sans-serif;
+  --font-sans: 'Archivo', sans-serif;
+  --font-race: 'Archivo', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Border Radius */
-  --radius: var(--radius);
-  --radius-lg: var(--radius);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-sm: calc(var(--radius) - 4px);
+  --radius: 1.5rem;
+  --radius-lg: 1.5rem;
+  --radius-md: 1rem;
+  --radius-sm: 0.75rem;
 
   /* Width */
   --width-content-width: var(--width-content-width);
@@ -138,7 +138,7 @@ body {
   margin: 0;
   background-color: #ffffff;
   color: #09090b;
-  font-family: 'Figtree', sans-serif;
+  font-family: 'Archivo', sans-serif;
   position: relative;
   min-height: 100vh;
   overscroll-behavior: none;
@@ -151,7 +151,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Figtree', sans-serif;
+  font-family: 'Archivo', sans-serif;
   font-weight: 800;
   letter-spacing: -0.02em;
 }
@@ -164,7 +164,7 @@ h6 {
 .datenblatt-box {
   background-color: #ffffff;
   border: 1px solid #e4e4e7;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
 }
 
 .datenblatt-row {
@@ -183,8 +183,8 @@ h6 {
 .card {
   background: #ffffff;
   border: 1px solid #e4e4e7;
-  border-radius: 0.75rem;
-  transition: all 0.2s ease-in-out;
+  border-radius: 1.5rem;
+  transition: all 0.25s ease-in-out;
 }
 
 .card:hover {
@@ -195,11 +195,11 @@ h6 {
 .primary-button {
   background-color: #E6007E;
   color: #ffffff;
-  font-family: 'Figtree', sans-serif;
+  font-family: 'Archivo', sans-serif;
   font-weight: 700;
   letter-spacing: 0.01em;
-  border-radius: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
   transition: all 0.2s ease-in-out;
   display: inline-flex;
   align-items: center;
@@ -209,17 +209,18 @@ h6 {
 .primary-button:hover {
   background-color: #c4006b;
   transform: translateY(-1px);
+  box-shadow: 0 6px 20px -4px rgba(230, 0, 126, 0.4);
 }
 
 .secondary-button {
-  background-color: #09090b;
-  color: #ffffff;
-  font-family: 'Figtree', sans-serif;
+  background-color: transparent;
+  color: #09090b;
+  font-family: 'Archivo', sans-serif;
   font-weight: 700;
   letter-spacing: 0.01em;
-  border-radius: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border: 1px solid #09090b;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  border: 2px solid #09090b;
   transition: all 0.2s ease-in-out;
   display: inline-flex;
   align-items: center;
@@ -227,7 +228,8 @@ h6 {
 }
 
 .secondary-button:hover {
-  background-color: #27272a;
-  border-color: #27272a;
+  background-color: #09090b;
+  color: #ffffff;
+  border-color: #09090b;
   transform: translateY(-1px);
 }
