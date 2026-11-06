@@ -1,142 +1,154 @@
 import React from 'react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { ShoppingBag } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ExternalLink, ArrowRight } from 'lucide-react';
 
 export default function ShopPage() {
   const shopCategories = [
     {
       title: 'Helme & Protektoren',
-      desc: 'MIPS-Sicherheitssysteme & Aero-Helme von Giro, Abus & Poc.',
+      desc: 'Sicherheit mit MIPS-Technologie und bester Belüftung von führenden Herstellern.',
       image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80',
-      tag: 'Sicherheit',
     },
     {
       title: 'Bekleidung & Trikots',
-      desc: 'High-Performance Radbekleidung, Windjacken & Hosen für jedes Wetter.',
+      desc: 'Funktionsbekleidung, Windjacken und Radhosen für jede Jahreszeit.',
       image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80',
-      tag: 'Apparel',
     },
     {
       title: 'Laufräder & Reifen',
-      desc: 'Carbon-Aerosätze von DT Swiss, Mavic & Continental GP5000 / Schwalbe.',
+      desc: 'Carbon-Laufradsätze, High-End Tubeless Reifen und Gravel-Komponenten.',
       image: 'https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=800&q=80',
-      tag: 'Performance',
     },
     {
-      title: 'Verschleißteile & Kassetten',
-      desc: 'Ketten, Bremsbeläge, Kassetten von Shimano, SRAM & Campagnolo.',
+      title: 'Verschleißteile & Antrieb',
+      desc: 'Ketten, Kassetten, Bremsbeläge und Schalungskomponenten auf Lager.',
       image: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80',
-      tag: 'Ersatzteile',
     },
     {
-      title: 'Elektronik & Beleuchtung',
-      desc: 'GPS-Radcomputer (Garmin, Wahoo) & Hochleistungs-LED Scheinwerfer.',
+      title: 'Elektronik & Navigation',
+      desc: 'GPS-Radcomputer, Wattmesser und leistungsstarke LED-Beleuchtungssets.',
       image: 'https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=800&q=80',
-      tag: 'Tech Gadgets',
     },
     {
-      title: 'Pflege & Schmiermittel',
-      desc: 'Kettenwachs, Reiniger & Entfetter von Muc-Off & Tunap Sports.',
+      title: 'Pflege & Werkzeug',
+      desc: 'Kettenöle, Reiniger, Drehmomentschlüssel und Pannen-Sets für unterwegs.',
       image: 'https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=800&q=80',
-      tag: 'Werkstatt Lab',
     },
   ];
 
   return (
-    <div className="space-y-20 pb-20">
+    <div className="space-y-24 pb-24 bg-white text-zinc-900">
       {/* HERO SECTION */}
-      <section className="bg-[#0a1324] text-white py-20 bg-topo border-b-4 border-[#0056c6]">
-        <div className="max-w-[100rem] mx-auto px-4 lg:px-8">
+      <section className="relative min-h-[50vh] flex items-center justify-center bg-zinc-900 text-white overflow-hidden py-20">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=2000&q=80"
+            alt="Shop Radsport Derjung"
+            className="w-full h-full object-cover opacity-35"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10 max-w-[100rem] mx-auto px-4 lg:px-8 w-full text-center md:text-left">
           <ScrollReveal variant="slide-up">
             <div className="max-w-3xl space-y-4">
-              <div className="inline-flex items-center gap-2 bg-[#facc15] text-[#0a1324] px-3 py-1 rounded text-xs font-mono font-bold uppercase">
-                <ShoppingBag className="w-4 h-4" /> SHOP & ZUBEHÖR D74
-              </div>
-              <h1 className="text-5xl md:text-7xl font-race italic uppercase font-extrabold leading-none text-white">
-                EQUIPMENT & <span className="text-[#0056c6]">ZUBEHÖR SHOP</span>
+              <span className="bg-[#E6007E] text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-sm inline-block">
+                Zubehör & Equipment
+              </span>
+              <h1 className="text-5xl md:text-7xl font-black tracking-tight text-white">
+                Shop & Ausrüstung
               </h1>
-              <p className="text-slate-300 text-lg md:text-xl font-sans leading-relaxed">
-                Entdeckt unser Sortiment an Bekleidung, Helmen, Ersatzteilen und Zubehör direkt in unserem Store in Bergen im Chiemgau oder fragt Teile online bei uns an.
+              <p className="text-zinc-300 text-lg md:text-xl leading-relaxed">
+                Entdeckt ausgewählte Bekleidung, Helme, Ersatzteile und Zubehör bei uns vor Ort in Bergen im Chiemgau oder rund um die Uhr im Onlineshop.
               </p>
+              <div className="pt-4">
+                <a
+                  href="https://shop.radsport-derjung.de"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="primary-button text-base inline-flex items-center gap-2"
+                >
+                  Zum Onlineshop
+                  <ExternalLink className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* CATEGORIES GRID */}
+      {/* TEXT ABSCHNITT */}
       <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
-        <ScrollReveal variant="fade-blur">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-4xl md:text-6xl font-race italic uppercase font-black text-slate-900">
-              UNSERE ZUBEHÖR <span className="text-[#0056c6]">KATEGORIEN</span>
-            </h2>
-            <p className="text-slate-600 font-sans text-base mt-2">
-              Alles was ihr für eure Ausfahrten, Rennen und Werkstattarbeiten benötigt.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {shopCategories.map((cat) => (
-              <div key={cat.title} className="card group rounded border border-slate-200 overflow-hidden bg-white flex flex-col justify-between">
-                <div className="relative h-64 bg-slate-900 overflow-hidden">
-                  <img
-                    src={cat.image}
-                    alt={cat.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#0a1324] text-[#facc15] text-xs font-mono font-bold px-2.5 py-1 rounded border border-[#0056c6]">
-                    {cat.tag}
-                  </div>
-                </div>
-
-                <div className="p-6 space-y-4 flex-grow flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-2xl font-race italic uppercase font-extrabold text-slate-900 group-hover:text-[#0056c6] transition-colors">
-                      {cat.title}
-                    </h3>
-                    <p className="text-slate-600 font-sans text-sm mt-2 leading-relaxed">
-                      {cat.desc}
-                    </p>
-                  </div>
-
-                  <div className="pt-2">
-                    <Link
-                      to="/kontakt"
-                      className="w-full bg-[#0a1324] hover:bg-[#0056c6] text-white font-race italic font-bold py-2.5 px-4 rounded text-center block uppercase text-sm transition-colors"
-                    >
-                      Teile & Verfügbarkeit Anfragen
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
+        <div className="max-w-3xl mx-auto text-center space-y-4">
+          <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest">
+            Erstklassiges Sortiment
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+            Erstausstattung & Spezialteile im Chiemgau
+          </h2>
+          <p className="text-zinc-600 text-base leading-relaxed">
+            Wir führen ausschließlich Produkte, von deren Qualität und Haltbarkeit wir selbst überzeugt sind. Egal ob ihr ein Ersatzteil für eure Schaltung sucht oder das passende Trikot für kalte Ausfahrten – wir beraten euch gerne.
+          </p>
+        </div>
       </section>
 
-      {/* ADVICE CTA */}
+      {/* KATEGORIEN MIT BILDERN */}
       <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
-        <div className="bg-white p-8 md:p-12 rounded border-2 border-[#0056c6] shadow-md text-center max-w-4xl mx-auto space-y-4">
-          <h3 className="text-3xl md:text-4xl font-race italic uppercase font-black text-slate-900">
-            SUCHT IHR EIN BESTIMMTES ERSATZTEIL?
-          </h3>
-          <p className="text-slate-700 font-sans max-w-2xl mx-auto">
-            Wir führen alle gängigen Ersatzteile vor Ort im Laden in Bergen. Rumpft uns einfach kurz an oder schickt uns eine Anfrage – wir prüfen lagernde Bestände oder bestellen Express!
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {shopCategories.map((cat) => (
+            <div key={cat.title} className="card overflow-hidden flex flex-col justify-between">
+              <div className="relative h-64 overflow-hidden bg-zinc-100">
+                <img
+                  src={cat.image}
+                  alt={cat.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              <div className="p-8 space-y-4 flex-grow flex flex-col justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold text-zinc-900">{cat.title}</h3>
+                  <p className="text-zinc-600 text-sm mt-2 leading-relaxed">
+                    {cat.desc}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-zinc-100">
+                  <a
+                    href="https://shop.radsport-derjung.de"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="secondary-button w-full text-center text-sm inline-flex items-center justify-center gap-2"
+                  >
+                    Kategorie im Shop ansehen
+                    <ArrowRight className="w-4 h-4 text-[#E6007E]" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ONLINESHOP BANNER */}
+      <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
+        <div className="bg-zinc-950 text-white rounded-2xl p-12 text-center space-y-6">
+          <h2 className="text-3xl md:text-5xl font-black tracking-tight">
+            24/7 Online einkaufen
+          </h2>
+          <p className="text-zinc-300 max-w-xl mx-auto text-sm md:text-base">
+            Besucht unseren vollständigen Katalog online, prüft Verfügbarkeiten in Echtzeit oder bestellt euch Ersatzteile bequem nach Hause.
           </p>
-          <div className="pt-2 flex justify-center gap-4 font-race italic uppercase font-bold">
+          <div className="pt-2">
             <a
-              href="tel:+49866212345"
-              className="bg-[#0056c6] text-white px-8 py-3.5 rounded text-lg shadow-md hover:bg-[#0045a3]"
+              href="https://shop.radsport-derjung.de"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="primary-button text-base inline-flex items-center gap-2"
             >
-              Telefon: 08662 / 12345
+              Zum Onlineshop
+              <ExternalLink className="w-5 h-5" />
             </a>
-            <Link
-              to="/kontakt"
-              className="bg-[#0a1324] text-white px-8 py-3.5 rounded text-lg hover:bg-[#182645]"
-            >
-              Kontaktformular
-            </Link>
           </div>
         </div>
       </section>

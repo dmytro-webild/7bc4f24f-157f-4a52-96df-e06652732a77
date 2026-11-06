@@ -6,7 +6,7 @@ import { StyleProvider } from "@/components/ui/StyleProvider";
 export default function Layout() {
   return (
     <StyleProvider buttonVariant="stagger">
-      <div className="min-h-screen flex flex-col bg-topo text-[#0a1324]">
+      <div className="min-h-screen flex flex-col bg-white text-zinc-900 font-sans">
         <Header />
         <main className="flex-grow">
           <Outlet />

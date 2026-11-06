@@ -1,147 +1,109 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { Wrench, ChevronRight, Award, Compass, Users, Store, Mountain, CheckCircle2, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, Wrench, ShieldCheck, ChevronRight } from 'lucide-react';
 
 export default function HomePage() {
   const categories = [
     {
       title: 'Premium Bikes',
       slug: 'premium',
-      desc: 'Handgefertigte Custom-Setups & High-End Rennmaschinen für Höchstleistung.',
-      image: 'https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1000&q=80',
-      badge: 'High-End Bausätze',
+      desc: 'Maßgeschneiderte High-End Custom-Aufbauten und exklusive Traumbikes.',
+      image: 'https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1200&q=80',
     },
     {
       title: 'Rennrad',
       slug: 'rennrad',
-      desc: 'Aero-Boliden und Endurance-Räder für schnelle Runden um den Chiemsee.',
-      image: 'https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=1000&q=80',
-      badge: 'Speed & Aero',
+      desc: 'Aero-Performance und Endurance-Komfort für lange Einheiten im Voralpenland.',
+      image: 'https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=1200&q=80',
     },
     {
       title: 'Gravel',
       slug: 'gravel',
-      desc: 'Freiheit abseits des Asphalts. Stabilität & Speed für Forstwege im Chiemgau.',
-      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1000&q=80',
-      badge: 'All-Terrain',
+      desc: 'Vielseitige All-Road Bikes für Abenteuer auf Schotter und Asphalt.',
+      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80',
     },
     {
       title: 'Mountainbikes',
       slug: 'mtb',
-      desc: 'Trail-Fully & Hardtail Biker-Traum für Hochfelln, Kampenwand & Trails.',
-      image: 'https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=1000&q=80',
-      badge: 'Trail & Enduro',
+      desc: 'Fullys & Hardtails für technische Trails und alpine Anstiege.',
+      image: 'https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=1200&q=80',
     },
     {
-      title: 'E-MTB & E-Bikes',
+      title: 'E-MTB',
       slug: 'e-mtb',
-      desc: 'Maximale Power bergauf mit Bosch Smart System & Shimano EP8 Antrieben.',
-      image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=1000&q=80',
-      badge: 'Power Support',
+      desc: 'Moderne E-Performance mit starken Antrieben für maximale Höhenmeter.',
+      image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=1200&q=80',
     },
   ];
 
-  const brands = [
-    'TREK', 'SPECIALIZED', 'CANNONDALE', 'PINARELLO', 'CUBE', 'SCOTT', 'SHIMANO', 'SRAM', 'BOSCH POWER', 'DT SWISS', 'FOX RACING'
-  ];
-
-  const galleryTeasers = [
+  const galleryPages = [
     {
       title: 'Team Impressionen',
       path: '/team',
-      subtitle: 'Unsere Meistermechaniker & Rennfahrer',
-      desc: 'Erfahrt, wer hinter Radsport Derjung steht. Jahrelange Rennsporterfahrung und Leidenschaft für Schrauben und Feintuning.',
+      desc: 'Eure Experten in Werkstatt und Beratung.',
       image: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=900&q=80',
-      icon: Users,
     },
     {
       title: 'Store Impressionen',
       path: '/store',
-      subtitle: 'Showroom in Bergen im Chiemgau',
-      desc: 'Blickt in unseren modernen Laden mit Bekleidungsbereich, Helmgalerie, Zubehörwand und Custom-Bike-Studio.',
+      desc: 'Unser Showroom in Bergen im Chiemgau.',
       image: 'https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=900&q=80',
-      icon: Store,
     },
     {
       title: 'Bikestation Impressionen',
       path: '/bikestation',
-      subtitle: 'Chiemgau Test- & Verleihstation',
-      desc: 'Direkter Ausgangspunkt für Radtouren in den Chiemgauer Alpen am Fuß des Hochfelln. Testet aktuelle Modelle direkt am Berg.',
+      desc: 'Test-Center und Startpunkt am Hochfelln.',
       image: 'https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=900&q=80',
-      icon: Mountain,
     },
   ];
 
+  const brands = [
+    'TREK', 'SPECIALIZED', 'CANNONDALE', 'PINARELLO', 'CUBE', 'SCOTT', 'SHIMANO', 'SRAM', 'BOSCH'
+  ];
+
   return (
-    <div className="space-y-20 pb-20">
+    <div className="space-y-24 pb-24 bg-white text-zinc-900">
       {/* HERO SECTION */}
-      <section className="relative min-h-[85vh] flex items-center justify-center bg-[#0a1324] text-white overflow-hidden py-24 border-b-4 border-[#0056c6]">
-        {/* Background Image with Overlay */}
+      <section className="relative min-h-[80vh] flex items-center justify-center bg-zinc-900 text-white overflow-hidden py-24">
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=2000&q=80"
-            alt="Radsport Derjung Chiemgau"
-            className="w-full h-full object-cover object-center opacity-30"
+            alt="Radsport Derjung Bergen im Chiemgau"
+            className="w-full h-full object-cover opacity-35"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1324] via-[#0a1324]/80 to-transparent"></div>
-          {/* Topo line grid */}
-          <div className="absolute inset-0 bg-topo opacity-40 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent"></div>
         </div>
 
-        <div className="relative z-10 max-w-[100rem] mx-auto px-4 lg:px-8 w-full">
+        <div className="relative z-10 max-w-[100rem] mx-auto px-4 lg:px-8 w-full text-center md:text-left">
           <ScrollReveal variant="slide-up">
             <div className="max-w-3xl space-y-6">
-              <div className="inline-flex items-center gap-2 bg-[#0056c6] text-white px-3 py-1 rounded text-xs font-mono font-bold tracking-wider uppercase shadow-md">
-                <span className="bg-[#facc15] text-[#0a1324] px-1.5 py-0.5 rounded font-black">D74</span>
-                EST. 1986 · BERGEN IM CHIEMGAU
+              <div className="inline-block bg-[#E6007E] text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-sm">
+                Seit 1986 in Bergen im Chiemgau
               </div>
 
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-race italic uppercase font-extrabold text-white leading-none tracking-tight">
-                RADSPORT <span className="text-[#0056c6]">DERJUNG</span>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none text-white">
+                Radsport Derjung
               </h1>
 
-              <p className="text-xl md:text-2xl font-race italic text-[#facc15] tracking-wide">
-                EUER FAHRRADLADEN & MEISTERWERKSTATT IN BERGEN IM CHIEMGAU
+              <p className="text-xl md:text-2xl font-semibold text-zinc-200">
+                Fahrradladen & Meisterwerkstatt am Fuße des Hochfelln.
               </p>
 
-              <p className="text-slate-300 text-base md:text-lg max-w-2xl leading-relaxed font-sans">
-                Seit 1986 stehen wir für echte Leidenschaft auf zwei Rädern. Egal ob ihr auf der Suche nach dem perfekten Aero-Rennrad, einem robusten Gravelbike für die Chiemgauer Voralpen oder einer erstklassigen Inspektion seid – bei uns seid ihr goldrichtig.
+              <p className="text-zinc-300 text-base md:text-lg max-w-2xl leading-relaxed">
+                Ob Highend-Rennrad, Geländegängiges Gravelbike oder professionelle Inspektion in unserer Meisterwerkstatt – wir sorgen dafür, dass ihr perfekt auf zwei Rädern unterwegs seid.
               </p>
 
-              {/* Action Buttons */}
-              <div className="pt-4 flex flex-wrap gap-4 font-race italic text-lg uppercase tracking-wider">
-                <Link
-                  to="/bikes"
-                  className="bg-[#0056c6] hover:bg-[#0045a3] text-white px-8 py-4 rounded font-bold shadow-lg flex items-center gap-2 transition-transform hover:-translate-y-0.5"
-                >
-                  Bikes Entdecken
-                  <ChevronRight className="w-5 h-5 text-[#facc15]" />
+              {/* Two Action Buttons */}
+              <div className="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
+                <Link to="/bikes" className="primary-button text-base">
+                  Bikes entdecken
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-
-                <Link
-                  to="/werkstatt"
-                  className="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded font-bold backdrop-blur-sm flex items-center gap-2 transition-colors"
-                >
-                  <Wrench className="w-5 h-5 text-[#facc15]" />
-                  Werkstatt-Termin
+                <Link to="/werkstatt" className="secondary-button text-base">
+                  Werkstatt entdecken
                 </Link>
-              </div>
-
-              {/* Specs Badge Bar */}
-              <div className="pt-8 grid grid-cols-3 gap-4 border-t border-slate-800 text-xs font-mono text-slate-400">
-                <div>
-                  <span className="text-white font-bold block text-sm">38+ JAHRE</span>
-                  Erfahrung seit 1986
-                </div>
-                <div>
-                  <span className="text-[#facc15] font-bold block text-sm">MEISTERBETRIEB</span>
-                  D74 Zertifiziert
-                </div>
-                <div>
-                  <span className="text-white font-bold block text-sm">BERGEN / CHIEMGAU</span>
-                  Am Fuß des Hochfelln
-                </div>
               </div>
             </div>
           </ScrollReveal>
@@ -149,226 +111,160 @@ export default function HomePage() {
       </section>
 
       {/* MARKEN LEISTE */}
-      <section className="bg-white py-6 border-y border-slate-200">
-        <div className="max-w-[100rem] mx-auto px-4 lg:px-8">
-          <div className="text-xs font-race italic uppercase font-bold text-slate-400 mb-3 text-center tracking-widest">
-            UNSERE PREMIUM PARTNER & MARKEN
-          </div>
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 opacity-80">
-            {brands.map((brand) => (
-              <span key={brand} className="font-race italic font-black text-xl md:text-2xl text-slate-800 hover:text-[#0056c6] transition-colors cursor-pointer">
-                {brand}
-              </span>
-            ))}
-          </div>
+      <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
+        <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest text-center mb-6">
+          Ausgewählte Marken & Premium-Partner
+        </p>
+        <div className="flex flex-wrap justify-between items-center gap-6 py-6 border-y border-zinc-200">
+          {brands.map((brand) => (
+            <span key={brand} className="text-xl md:text-2xl font-black text-zinc-400 hover:text-[#E6007E] transition-colors cursor-default">
+              {brand}
+            </span>
+          ))}
         </div>
       </section>
 
       {/* BIKE KATEGORIEN BIL DRASTER */}
       <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
         <ScrollReveal variant="fade-blur">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b-2 border-slate-200 gap-4">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#0056c6] uppercase tracking-wider mb-2">
-                <Compass className="w-4 h-4 text-[#facc15]" /> SPEZIFIKATION & KATEGORIEN
-              </div>
-              <h2 className="text-4xl md:text-6xl font-race italic uppercase font-black text-slate-900">
-                FAHRRAD-KATEGORIEN BEI <span className="text-[#0056c6]">DERJUNG</span>
+              <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest block mb-2">
+                Vielfalt & Performance
+              </span>
+              <h2 className="text-4xl md:text-6xl font-black tracking-tight">
+                Unsere Bike-Kategorien
               </h2>
             </div>
-            <Link
-              to="/bikes"
-              className="text-[#0056c6] font-race italic font-bold text-xl uppercase hover:text-slate-900 flex items-center gap-1"
-            >
-              Alle Kategorien ansehen <ArrowUpRight className="w-5 h-5" />
+            <Link to="/bikes" className="text-sm font-bold text-[#E6007E] hover:underline inline-flex items-center gap-1">
+              Alle Modelle & Details anzeigen <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((cat, idx) => (
-              <div
+              <Link
                 key={cat.slug}
-                className={`card group overflow-hidden rounded border border-slate-200 flex flex-col ${
+                to={`/bikes/${cat.slug}`}
+                className={`group card overflow-hidden flex flex-col ${
                   idx === 0 ? 'md:col-span-2 lg:col-span-2' : ''
                 }`}
               >
-                <div className="relative h-64 md:h-80 overflow-hidden bg-slate-900">
+                <div className="relative h-72 md:h-96 overflow-hidden bg-zinc-100">
                   <img
                     src={cat.image}
                     alt={cat.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 left-4 bg-[#0a1324]/90 backdrop-blur-sm text-[#facc15] font-mono text-xs font-bold px-3 py-1 rounded border border-[#0056c6]">
-                    {cat.badge}
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-white text-zinc-900 text-xs font-bold px-3 py-1 rounded-full shadow">
+                      {cat.title}
+                    </span>
                   </div>
                 </div>
-
-                <div className="p-6 bg-white flex-grow flex flex-col justify-between space-y-4">
+                <div className="p-6 space-y-2 flex-grow flex flex-col justify-between">
                   <div>
-                    <h3 className="text-3xl font-race italic uppercase font-extrabold text-slate-900 group-hover:text-[#0056c6] transition-colors">
+                    <h3 className="text-2xl font-bold group-hover:text-[#E6007E] transition-colors">
                       {cat.title}
                     </h3>
-                    <p className="text-slate-600 text-sm mt-2 font-sans leading-relaxed">
+                    <p className="text-zinc-600 text-sm mt-1 leading-relaxed">
                       {cat.desc}
                     </p>
                   </div>
-
-                  <div className="pt-2">
-                    <Link
-                      to={`/bikes/${cat.slug}`}
-                      className="inline-flex items-center gap-2 text-sm font-race italic font-bold uppercase text-[#0056c6] group-hover:translate-x-1 transition-transform"
-                    >
-                      Modelle & Datenblatt ansehen
-                      <ChevronRight className="w-4 h-4 text-[#facc15]" />
-                    </Link>
+                  <div className="pt-4 flex items-center text-xs font-bold text-[#E6007E] group-hover:translate-x-1 transition-transform">
+                    Kategorie erkunden <ArrowRight className="w-4 h-4 ml-1" />
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </ScrollReveal>
       </section>
 
-      {/* WERKSTATT ABSCHNITT MIT DATENBLATT */}
-      <section className="bg-[#0a1324] text-white py-20 bg-topo border-y-4 border-[#0056c6]">
+      {/* WERKSTATT ABSCHNITT */}
+      <section className="bg-zinc-50 py-20 border-y border-zinc-200">
         <div className="max-w-[100rem] mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <ScrollReveal variant="slide-up" className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-[#facc15] text-[#0a1324] px-3 py-1 rounded text-xs font-mono font-bold uppercase">
-                <Wrench className="w-4 h-4" /> D74 MEISTERWERKSTATT BERGEN
-              </div>
-
-              <h2 className="text-4xl md:text-6xl font-race italic uppercase font-black text-white leading-tight">
-                SCHNELLER SERVICE. <br />
-                <span className="text-[#0056c6]">PRÄZISION BIS INS DETAIL.</span>
-              </h2>
-
-              <p className="text-slate-300 text-base md:text-lg leading-relaxed font-sans">
-                Euer Bike verdient die beste Pflege. Unsere Werkstatt in Bergen im Chiemgau arbeitet nach höchsten technischen Standards – von der grundlegenden Jahresinspektion über komplexe Fahrwerks-Tunings bis zur E-Bike Systemdiagnose.
-              </p>
-
-              <div className="space-y-3 font-sans text-sm">
-                <div className="flex items-center gap-3 text-slate-200">
-                  <CheckCircle2 className="w-5 h-5 text-[#facc15] shrink-0" />
-                  <span><strong>24h Express-Reparatur:</strong> Für dringende Fahrten vor der Tour.</span>
-                </div>
-                <div className="flex items-center gap-3 text-slate-200">
-                  <CheckCircle2 className="w-5 h-5 text-[#facc15] shrink-0" />
-                  <span><strong>Bosch & Shimano Zertifiziert:</strong> Neueste Diagnosesoftware & Akkutests.</span>
-                </div>
-                <div className="flex items-center gap-3 text-slate-200">
-                  <CheckCircle2 className="w-5 h-5 text-[#facc15] shrink-0" />
-                  <span><strong>Echte Transparenz:</strong> Ausführlicher Werkstatt-Bericht nach Drehmoment-Protokoll.</span>
-                </div>
-              </div>
-
-              <div className="pt-4 flex gap-4 font-race italic text-lg uppercase">
-                <Link
-                  to="/werkstatt"
-                  className="bg-[#0056c6] hover:bg-[#0045a3] text-white px-8 py-3.5 rounded font-bold shadow-md flex items-center gap-2"
-                >
-                  Werkstatt Leistungen & Buchung
-                  <ChevronRight className="w-5 h-5 text-[#facc15]" />
-                </Link>
-              </div>
-            </ScrollReveal>
-
-            {/* Technisches Datenblatt Box */}
-            <ScrollReveal variant="fade-blur">
-              <div className="datenblatt-box p-6 rounded text-slate-900">
-                <div className="flex justify-between items-center border-b-2 border-[#0a1324] pb-3 mb-4">
-                  <span className="font-race italic font-black text-2xl uppercase text-[#0056c6]">
-                    SPEC SHEET // MEISTER-WERKSTATT D74
-                  </span>
-                  <span className="bg-[#0a1324] text-[#facc15] text-xs font-mono font-bold px-2.5 py-1 rounded">
-                    PROTOKOL: D74-2026
-                  </span>
-                </div>
-
-                <div className="space-y-1 divide-y divide-slate-200 font-mono text-xs md:text-sm">
-                  <div className="datenblatt-row">
-                    <span className="text-slate-500 uppercase">Standort</span>
-                    <span className="font-bold">Bergen im Chiemgau (D74)</span>
+          <ScrollReveal variant="slide-up">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest">
+                  Meisterwerkstatt Bergen
+                </span>
+                <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+                  Euer Bike in besten Händen
+                </h2>
+                <p className="text-zinc-600 text-base leading-relaxed">
+                  In unserer hauseigenen Meisterwerkstatt führen wir Inspektionen, Software-Updates für E-Bikes, Gabel-Services sowie individuelles Tuning fachgerecht und zügig durch.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                  <div className="flex items-start gap-3">
+                    <Wrench className="w-5 h-5 text-[#E6007E] shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-bold text-sm">Meisterlicher Service</h4>
+                      <p className="text-xs text-zinc-500">Erfahrene Mechaniker für alle Marken</p>
+                    </div>
                   </div>
-                  <div className="datenblatt-row">
-                    <span className="text-slate-500 uppercase">Leiter Werkstatt</span>
-                    <span className="font-bold">Zweiradmechanikermeister Derjung</span>
-                  </div>
-                  <div className="datenblatt-row">
-                    <span className="text-slate-500 uppercase">Inspektions-Umfang</span>
-                    <span className="font-bold text-[#0056c6]">32 Prüfpunkte inkl. Drehmoment</span>
-                  </div>
-                  <div className="datenblatt-row">
-                    <span className="text-slate-500 uppercase">Diagnosesysteme</span>
-                    <span className="font-bold">Bosch eBike Systems, Shimano STEPS, SRAM AXS</span>
-                  </div>
-                  <div className="datenblatt-row">
-                    <span className="text-slate-500 uppercase">Dämpfer & Gabel</span>
-                    <span className="font-bold">Fox Racing & RockShox Certified Lab</span>
-                  </div>
-                  <div className="datenblatt-row">
-                    <span className="text-slate-500 uppercase">Durchlaufzeit</span>
-                    <span className="font-bold text-emerald-700">Express 24h / Standard 48h</span>
-                  </div>
-                  <div className="datenblatt-row">
-                    <span className="text-slate-500 uppercase">Garantie</span>
-                    <span className="font-bold">12 Monate auf Werkstattleistung</span>
+                  <div className="flex items-start gap-3">
+                    <ShieldCheck className="w-5 h-5 text-[#E6007E] shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-bold text-sm">Original-Ersatzteile</h4>
+                      <p className="text-xs text-zinc-500">Höchste Qualität & Herstellervorgaben</p>
+                    </div>
                   </div>
                 </div>
-
-                <div className="mt-6 pt-4 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
-                  <span>Prüfzeichen: DIN EN ISO 4210</span>
-                  <span className="font-bold text-[#0a1324]">Radsport Derjung Bergen</span>
+                <div className="pt-4">
+                  <Link to="/werkstatt" className="primary-button text-sm">
+                    Werkstatt-Leistungen ansehen
+                  </Link>
                 </div>
               </div>
-            </ScrollReveal>
-          </div>
+
+              {/* Image Container */}
+              <div className="relative rounded-2xl overflow-hidden h-96 shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80"
+                  alt="Werkstatt Radsport Derjung"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* GESCHICHTE ABSCHNITT */}
+      {/* SEIT 1986 ABSCHNITT */}
       <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
-        <ScrollReveal variant="slide-up">
-          <div className="bg-white p-8 md:p-14 rounded border border-slate-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-4 flex justify-center">
-              {/* Startnummer Badge */}
-              <div className="startnummer-badge p-8 w-64 h-80 flex flex-col justify-between items-center text-center">
-                <div className="text-xs font-mono uppercase tracking-widest text-slate-500">
-                  CHIEMGAU RACE NO.
-                </div>
-                <div className="text-6xl md:text-7xl font-extrabold text-[#0a1324] font-race italic my-2">
-                  #1986
-                </div>
-                <div className="w-full bg-[#0056c6] text-white py-1.5 text-xs font-mono font-bold uppercase rounded">
-                  GRÜNDUNGSJAHR BERGEN
-                </div>
+        <ScrollReveal variant="fade">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-5 relative h-96 rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=1000&q=80"
+                alt="Seit 1986 Radsport Derjung"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-6 left-6 bg-white text-zinc-900 p-4 rounded-xl shadow-lg border border-zinc-100">
+                <div className="text-3xl font-black text-[#E6007E]">1986</div>
+                <div className="text-xs font-bold text-zinc-500 uppercase tracking-wider">Gegründet in Bergen</div>
               </div>
             </div>
 
-            <div className="lg:col-span-8 space-y-4">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#0056c6] uppercase">
-                <Award className="w-4 h-4 text-[#facc15]" /> RADSPORT-TRADITION SEIT 1986
-              </div>
-
-              <h2 className="text-4xl md:text-5xl font-race italic uppercase font-black text-slate-900">
-                VOM RENNSORT-CLUB ZUM <span className="text-[#0056c6]">TOP BIKESHOP IN BERGEN</span>
+            <div className="lg:col-span-7 space-y-6">
+              <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest">
+                Tradition & Innovation
+              </span>
+              <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+                Seit 1986 – Euer Radsport-Partner im Chiemgau
               </h2>
-
-              <p className="text-slate-700 font-sans leading-relaxed">
-                1986 hat bei uns in Bergen im Chiemgau alles angefangen: Aus der Leidenschaft für den Straßenradsport und das Rennfahren entstand Radsport Derjung (D74). Über drei Jahrzehnte hinweg haben wir uns vom Geheimtipp unter Rennfahrern zu einem der führenden Fachgeschäfte und Werkstätten im Chiemgau entwickelt.
+              <p className="text-zinc-600 text-base leading-relaxed">
+                Seit fast 40 Jahren steht der Name Derjung für Qualität, persönliche Beratung und die tiefe Liebe zum Radfahren. Von den ersten Stahlrennrädern bis zu den modernsten E-MTBs haben wir jede Entwicklung begleitet.
               </p>
-
-              <p className="text-slate-700 font-sans leading-relaxed">
-                Wir testen alle Produkte selbst an den Anstiegen des Hochfelln und der Kampenwand. Bei uns bekommt ihr ehrliche Empfehlungen, Fachwissen auf Meister-Niveau und die Begeisterung fürs Fahrradfahren aus erster Hand.
+              <p className="text-zinc-600 text-base leading-relaxed">
+                Wir sind selbst begeisterte Radfahrer und testen unsere Produkte auf den Trails und Straßen unserer Heimat. Bei uns erhaltet ihr ehrliche Empfehlungen aus der Praxis.
               </p>
-
               <div className="pt-2">
-                <Link
-                  to="/wir"
-                  className="inline-flex items-center gap-2 bg-[#0a1324] hover:bg-[#152340] text-white px-6 py-3 rounded font-race italic font-bold uppercase text-base"
-                >
-                  Unsere Geschichte & Team Zeitleiste lesen
-                  <ChevronRight className="w-4 h-4 text-[#facc15]" />
+                <Link to="/wir" className="secondary-button text-sm">
+                  Erfahrt mehr über uns
                 </Link>
               </div>
             </div>
@@ -376,64 +272,39 @@ export default function HomePage() {
         </ScrollReveal>
       </section>
 
-      {/* GALERIE UNTERSEITEN TEASER (Team, Store, Bikestation) */}
+      {/* GALERIEN ABSCHNITT */}
       <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
-        <ScrollReveal variant="fade-blur">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#0056c6] uppercase tracking-wider mb-2">
-              <Store className="w-4 h-4 text-[#facc15]" /> EINBLICKE IN DIE WELT VON DERJUNG
-            </div>
-            <h2 className="text-4xl md:text-6xl font-race italic uppercase font-black text-slate-900">
-              IMPRESSIONEN & <span className="text-[#0056c6]">GALERIEN</span>
-            </h2>
-            <p className="text-slate-600 font-sans text-base mt-3">
-              Klickt euch durch unsere Impressionen und erhaltet einen Blick hinter die Kulissen unseres Ladens, der Meisterwerkstatt und unserer Test-Bikestation am Chiemgau.
-            </p>
-          </div>
+        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+          <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest">
+            Einblicke & impressionen
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+            Entdeckt unsere Standorte & Crew
+          </h2>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {galleryTeasers.map((g) => {
-              const IconComp = g.icon;
-              return (
-                <Link
-                  key={g.path}
-                  to={g.path}
-                  className="card group overflow-hidden rounded border border-slate-200 flex flex-col justify-between hover:shadow-xl transition-all"
-                >
-                  <div className="relative h-64 overflow-hidden bg-slate-900">
-                    <img
-                      src={g.image}
-                      alt={g.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
-                    />
-                    <div className="absolute top-3 left-3 bg-[#0a1324]/90 text-[#facc15] p-2 rounded border border-[#0056c6]">
-                      <IconComp className="w-5 h-5" />
-                    </div>
-                  </div>
-
-                  <div className="p-6 bg-white space-y-3 flex-grow flex flex-col justify-between">
-                    <div>
-                      <div className="text-xs font-mono font-bold text-[#0056c6] uppercase">
-                        {g.subtitle}
-                      </div>
-                      <h3 className="text-2xl font-race italic uppercase font-extrabold text-slate-900 group-hover:text-[#0056c6] transition-colors mt-1">
-                        {g.title}
-                      </h3>
-                      <p className="text-slate-600 text-sm font-sans mt-2 leading-relaxed">
-                        {g.desc}
-                      </p>
-                    </div>
-
-                    <div className="pt-3 border-t border-slate-100 flex items-center justify-between font-race italic font-bold uppercase text-sm text-[#0056c6]">
-                      <span>Galerie öffnen</span>
-                      <ChevronRight className="w-4 h-4 text-[#facc15]" />
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </ScrollReveal>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {galleryPages.map((item) => (
+            <Link key={item.path} to={item.path} className="group card overflow-hidden flex flex-col">
+              <div className="relative h-64 overflow-hidden bg-zinc-100">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6 space-y-2 flex-grow">
+                <h3 className="text-xl font-bold group-hover:text-[#E6007E] transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-zinc-600 text-sm">{item.desc}</p>
+                <div className="pt-3 text-xs font-bold text-[#E6007E] flex items-center">
+                  Galerie ansehen <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </section>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { Wrench, CheckCircle2, Clock, ShieldCheck, Cpu, Calendar } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 export default function WerkstattPage() {
   const [selectedService, setSelectedService] = useState('Grosse Jahresinspektion');
@@ -10,374 +10,323 @@ export default function WerkstattPage() {
     {
       title: 'Kleine Jahresinspektion',
       price: '69 €',
-      time: '24-48 Std',
+      time: '24-48 Std.',
       points: [
-        'Sicherheits-Check aller Schraubverbindungen mit Drehmoment',
-        'Bremsbelag- & Scheibenverschleißprüfung',
-        'Schaltung einstellen & Kette beurteilen',
-        'Reifendruck- & Laufflächenkontrolle',
-        'Lichtanlagenprüfung',
+        'Prüfung aller Schraubverbindungen mit Drehmoment',
+        'Bremsen- & Verschleißkontrolle',
+        'Schaltung & Kettenpflege',
+        'Reifendruck- & Sichtprüfung',
       ],
-      badge: 'Basis Check',
     },
     {
-      title: 'Grosse Jahresinspektion D74',
+      title: 'Grosse Jahresinspektion',
       price: '129 €',
-      time: '24-48 Std',
+      time: '24-48 Std.',
       points: [
-        'Inklusive aller Leistungen der kleinen Inspektion',
-        'Zentrieren beider Laufräder im Speichenständer',
-        'Reinigung & Schmierung des gesamten Antriebsstrangs',
-        'Steuersatz- & Tretlager-Demontage, Nachfetten',
-        'Schaltzug-Erneuerung & Hydraulikbremsen-Druckpunktprüfung',
-        'Probefahrt durch Meister',
+        'Alle Leistungen der kleinen Inspektion',
+        'Zentrierung der Laufräder',
+        'Demontage & Reinigung des Antriebs',
+        'Steuersatz- & Tretlagerwartung',
+        'Probefahrt & Meisterabnahme',
       ],
-      badge: 'Empfehlung',
     },
     {
-      title: 'E-Bike Diagnostik & Service',
+      title: 'E-Bike Service & Software-Update',
       price: '99 €',
-      time: '24 Std',
+      time: '24 Std.',
       points: [
-        'Software-Update (Bosch, Shimano STEPS, Specialized)',
-        'Akku-Kapazitäts- und Kapazitätsmessung mit Prüfprotokoll',
-        'Motorbefestigung & Sensor-Feinjustierung',
-        'Fehlerspeicher auslesen & Bereinigen',
-        'Kontakt-Korrosionsschutz & Stecker-Pflege',
+        'Software-Diagnose & System-Update (Bosch, Shimano)',
+        'Akku-Kapazitätsprüfung mit Protokoll',
+        'Motorbefestigung & Sensorabstimmung',
+        'Kontaktreinigung & Pflege',
       ],
-      badge: 'Smart System',
     },
     {
-      title: 'Dämpfer & Gabel Lab-Service',
+      title: 'Fahrwerk & Dämpfer-Service',
       price: 'ab 119 €',
-      time: '48 Std',
+      time: '48 Std.',
       points: [
-        'O-Ring- & Abstreifer-Erneuerung (Fox Racing & RockShox)',
-        'Dämpfungsöl-Wechsel mit Original-Herstellervorgabe',
-        'Stickstoff-Kammer Befüllung',
-        'Luftkammerservice & SAG-Feinabstimmung auf Fahrergewicht',
+        'Dichtungs- & Abstreifer-Erneuerung (Fox, RockShox)',
+        'Ölwechsel nach Herstellervorgaben',
+        'SAG-Abstimmung auf Fahrergewicht',
+        'Druck- & Zugstufen-Check',
       ],
-      badge: 'Suspension Lab',
     },
   ];
 
   const ablaufSchritte = [
     {
       nr: '01',
-      title: 'TERMIN & ONLINE-ANMELDUNG',
-      desc: 'Bucht euren Wunschtermin bequem online oder bringt euer Bike direkt in unsere Meisterwerkstatt nach Bergen.',
+      title: 'Termin vereinbaren',
+      desc: 'Nutzt unser Online-Formular oder ruft uns an, um euren Wunschtermin in unserer Meisterwerkstatt in Bergen festzulegen.',
     },
     {
       nr: '02',
-      title: 'DATENBLATT-AUFNAHME',
-      desc: 'Gemeinsam mit unserem Werkstattmeister besprechen wir alle Mängel und legen das Datenblatt fest – transparente Kosten ohne Überraschungen.',
+      title: 'Fahrrad-Übergabe',
+      desc: 'Gemeinsam mit unserem Werkstattmeister besprechen wir alle Wünsche und legen den Serviceumfang transparent fest.',
     },
     {
       nr: '03',
-      title: 'MEISTERSERVICE D74',
-      desc: 'Präzisionsarbeit mit Drehmoment-Protokoll, Diagnosesoftware und Original-Ersatzteilen namhafter Hersteller.',
+      title: 'Fachgerechte Reparatur',
+      desc: 'Euer Bike wird mit Präzisionswerkzeug und Original-Ersatzteilen sorgfältig gewartet und eingestellt.',
     },
     {
       nr: '04',
-      title: 'TESTFAHRT & ÜBERGABE',
-      desc: 'Nach ausgiebiger Probefahrt durch den Meister ist euer Bike abholbereit – inklusive 12 Monaten Werkstattgarantie.',
+      title: 'Probefahrt & Abholung',
+      desc: 'Nach der Meisterabnahme und Funktionsprüfung steht euer Fahrrad einsatzbereit zur Abholung bereit.',
     },
   ];
 
   const galleryImages = [
     {
-      title: 'Präzisions-Werkzeuge D74 Lab',
+      title: 'Meisterwerkstatt Bergen',
       image: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80',
     },
     {
-      title: 'Bosch & Shimano Diagnosestation',
+      title: 'Diagnosesysteme',
       image: 'https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=800&q=80',
     },
     {
-      title: 'Custom Laufradbau & Speichenzentrierung',
+      title: 'Laufradbau',
       image: 'https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=800&q=80',
     },
     {
-      title: 'Fox Suspension Wartung',
+      title: 'Fahrwerksservice',
       image: 'https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=800&q=80',
     },
   ];
 
   return (
-    <div className="space-y-20 pb-20">
+    <div className="space-y-24 pb-24 bg-white text-zinc-900">
       {/* HERO SECTION */}
-      <section className="bg-[#0a1324] text-white py-20 bg-topo border-b-4 border-[#0056c6]">
-        <div className="max-w-[100rem] mx-auto px-4 lg:px-8">
+      <section className="relative min-h-[50vh] flex items-center justify-center bg-zinc-900 text-white overflow-hidden py-20">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=2000&q=80"
+            alt="Werkstatt Radsport Derjung"
+            className="w-full h-full object-cover opacity-35"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10 max-w-[100rem] mx-auto px-4 lg:px-8 w-full text-center md:text-left">
           <ScrollReveal variant="slide-up">
             <div className="max-w-3xl space-y-4">
-              <div className="inline-flex items-center gap-2 bg-[#facc15] text-[#0a1324] px-3 py-1 rounded text-xs font-mono font-bold uppercase">
-                <Wrench className="w-4 h-4" /> MEISTERWERKSTATT D74 BERGEN IM CHIEMGAU
-              </div>
-              <h1 className="text-5xl md:text-7xl font-race italic uppercase font-extrabold leading-none text-white">
-                WERKSTATT & <span className="text-[#0056c6]">MEISTERSERVICE</span>
+              <span className="bg-[#E6007E] text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-sm inline-block">
+                Meisterwerkstatt in Bergen
+              </span>
+              <h1 className="text-5xl md:text-7xl font-black tracking-tight text-white">
+                Werkstatt & Service
               </h1>
-              <p className="text-slate-300 text-lg md:text-xl font-sans leading-relaxed">
-                Ob professionelle Jahresinspektion, E-Bike Diagnose oder kompletter Fahrwerksservice – eure Bikes sind bei unserem Meisterteam in den besten Händen.
+              <p className="text-zinc-300 text-lg md:text-xl leading-relaxed">
+                Präzision, Transparenz und Fachkompetenz. Von der einfachen Inspektion bis zum kompletten Custom-Aufbau.
               </p>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* LEISTUNGEN ALS DATENBLATT */}
+      {/* LEISTUNGEN */}
       <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
-        <ScrollReveal variant="fade-blur">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#0056c6] uppercase tracking-wider mb-2">
-              <Cpu className="w-4 h-4 text-[#facc15]" /> PRÄZISION NACH NORM
-            </div>
-            <h2 className="text-4xl md:text-6xl font-race italic uppercase font-black text-slate-900">
-              WERKSTATT-LEISTUNGEN <span className="text-[#0056c6]">(DATENBLATT)</span>
-            </h2>
-            <p className="text-slate-600 font-sans text-base mt-2">
-              Klare Preise, definierte Prüfpunkte und garantierte Qualität bei jedem Werkstattauftrag.
-            </p>
-          </div>
+        <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest">
+            Überblick & Festpreise
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+            Unsere Werkstatt-Leistungen
+          </h2>
+          <p className="text-zinc-600 text-sm md:text-base">
+            Faire Festpreise und garantierte Qualität bei jedem Werkstattauftrag.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {werkstattLeistungen.map((item) => (
-              <div key={item.title} className="card rounded border border-slate-200 overflow-hidden flex flex-col justify-between">
-                <div className="p-6 bg-[#0a1324] text-white flex justify-between items-center border-b-2 border-[#0056c6]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {werkstattLeistungen.map((item) => (
+            <div key={item.title} className="card p-8 flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="flex justify-between items-start">
                   <div>
-                    <span className="bg-[#facc15] text-[#0a1324] text-xs font-mono font-bold px-2 py-0.5 rounded uppercase">
-                      {item.badge}
-                    </span>
-                    <h3 className="text-2xl font-race italic uppercase font-extrabold mt-2 text-white">
-                      {item.title}
-                    </h3>
+                    <h3 className="text-2xl font-bold text-zinc-900">{item.title}</h3>
+                    <div className="text-xs text-zinc-500 font-medium mt-1">Dauer: {item.time}</div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-3xl font-race italic font-extrabold text-[#facc15]">
-                      {item.price}
-                    </div>
-                    <div className="text-xs font-mono text-slate-400">
-                      Dauer: {item.time}
-                    </div>
+                  <div className="text-2xl font-black text-[#E6007E] bg-pink-50 px-3 py-1 rounded-lg">
+                    {item.price}
                   </div>
                 </div>
 
-                <div className="p-6 bg-white space-y-4 flex-grow flex flex-col justify-between">
-                  <div className="space-y-2">
-                    <div className="text-xs font-mono font-bold text-[#0056c6] uppercase">
-                      Prüf- & Serviceprotokoll:
-                    </div>
-                    <ul className="space-y-2 font-sans text-sm text-slate-700">
-                      {item.points.map((pt, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                          <span>{pt}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="pt-4 border-t border-slate-100">
-                    <a
-                      href="#buchung"
-                      onClick={() => setSelectedService(item.title)}
-                      className="w-full bg-[#0056c6] hover:bg-[#0045a3] text-white font-race italic font-bold py-2.5 rounded text-center block uppercase text-sm tracking-wide"
-                    >
-                      Diesen Service Wählen
-                    </a>
-                  </div>
-                </div>
+                <ul className="space-y-2 text-sm text-zinc-600 pt-2 border-t border-zinc-100">
+                  {item.points.map((pt, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#E6007E] shrink-0" />
+                      <span>{pt}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            ))}
-          </div>
-        </ScrollReveal>
+
+              <div className="pt-2">
+                <a
+                  href="#buchungsformular"
+                  onClick={() => setSelectedService(item.title)}
+                  className="primary-button w-full text-center text-sm"
+                >
+                  Termin für diesen Service wählen
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* ABLAUF IN 4 SCHRITTEN */}
-      <section className="bg-white py-20 border-y border-slate-200">
+      <section className="bg-zinc-50 py-20 border-y border-zinc-200">
         <div className="max-w-[100rem] mx-auto px-4 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#0056c6] uppercase tracking-wider mb-2">
-              <Clock className="w-4 h-4 text-[#facc15]" /> SCHNELL & TRANSPARENT
-            </div>
-            <h2 className="text-4xl md:text-6xl font-race italic uppercase font-black text-slate-900">
-              ABLAUF IN <span className="text-[#0056c6]">4 SCHRITTEN</span>
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest">
+              Einfach & unkompliziert
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+              Ablauf in 4 Schritten
             </h2>
-            <p className="text-slate-600 font-sans text-base mt-2">
-              So einfach bringt ihr euer Fahrrad in unsere Meisterwerkstatt nach Bergen im Chiemgau.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {ablaufSchritte.map((step) => (
-              <div key={step.nr} className="bg-[#f4f7fa] p-6 rounded border border-slate-300 relative space-y-3">
-                <div className="text-5xl font-race italic font-black text-[#0056c6]">
+              <div key={step.nr} className="bg-white p-8 rounded-xl border border-zinc-200 shadow-sm space-y-3">
+                <span className="text-3xl font-black text-[#E6007E] block">
                   {step.nr}
-                </div>
-                <h3 className="text-xl font-race italic uppercase font-bold text-slate-900">
-                  {step.title}
-                </h3>
-                <p className="text-slate-600 font-sans text-sm leading-relaxed">
-                  {step.desc}
-                </p>
+                </span>
+                <h3 className="text-xl font-bold text-zinc-900">{step.title}</h3>
+                <p className="text-zinc-600 text-sm leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* WERKSTATT BUCHUNGSFORMULAR */}
-      <section id="buchung" className="max-w-[100rem] mx-auto px-4 lg:px-8">
-        <ScrollReveal variant="slide-up">
-          <div className="bg-[#0a1324] text-white p-8 md:p-12 rounded border-2 border-[#0056c6] shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <div className="lg:col-span-5 space-y-4">
-              <div className="inline-flex items-center gap-2 bg-[#facc15] text-[#0a1324] px-3 py-1 rounded text-xs font-mono font-bold uppercase">
-                <Calendar className="w-4 h-4" /> ONLINE TERMINE D74
-              </div>
-              <h2 className="text-4xl md:text-5xl font-race italic uppercase font-black text-white leading-tight">
-                WERKSTATT-TERMIN <br />
-                <span className="text-[#0056c6]">DIREKT BUCHEN</span>
-              </h2>
-              <p className="text-slate-300 font-sans text-sm md:text-base leading-relaxed">
-                Wählt euren gewünschten Service und Wunschtermin. Wir bestätigen euren Werkstatttermin schnellstmöglich.
-              </p>
-
-              <div className="space-y-3 font-sans text-xs text-slate-300 pt-4 border-t border-slate-800">
-                <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#facc15]" />
-                  <span>Kostenlose Vorab-Diagnose bei Annahme</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-[#facc15]" />
-                  <span>Öffnungszeiten: Di-Fr 08:30-18:00, Sa 09:00-13:00</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-7 bg-white text-slate-900 p-6 md:p-8 rounded shadow-md space-y-4">
-              {formSubmitted ? (
-                <div className="bg-emerald-50 border border-emerald-200 text-emerald-900 p-8 rounded text-center space-y-3">
-                  <CheckCircle2 className="w-16 h-16 text-emerald-600 mx-auto" />
-                  <h3 className="text-3xl font-race italic uppercase font-bold">TERMINANFRAGE ERHALTEN!</h3>
-                  <p className="text-slate-700 font-sans">
-                    Vielen Dank! Wir haben eure Werkstattanfrage für <strong>{selectedService}</strong> erfolgreich registriert. Unser Team aus Bergen meldet sich in Kürze mit der Terminbestätigung.
-                  </p>
-                  <button
-                    onClick={() => setFormSubmitted(false)}
-                    className="mt-4 bg-[#0a1324] text-white font-race italic font-bold px-6 py-2.5 rounded text-sm uppercase"
-                  >
-                    Weitere Buchung vornehmen
-                  </button>
-                </div>
-              ) : (
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setFormSubmitted(true);
-                  }}
-                  className="space-y-4 font-sans text-sm"
-                >
-                  <div>
-                    <label className="block text-xs font-mono font-bold uppercase text-slate-700 mb-1">
-                      Gewünschte Leistung:
-                    </label>
-                    <select
-                      value={selectedService}
-                      onChange={(e) => setSelectedService(e.target.value)}
-                      className="w-full border border-slate-300 rounded px-3 py-2 text-slate-900 font-medium"
-                    >
-                      <option value="Kleine Jahresinspektion">Kleine Jahresinspektion (69 €)</option>
-                      <option value="Grosse Jahresinspektion D74">Grosse Jahresinspektion D74 (129 €)</option>
-                      <option value="E-Bike Diagnostik & Service">E-Bike Diagnostik & Service (99 €)</option>
-                      <option value="Dämpfer & Gabel Lab-Service">Dämpfer & Gabel Lab-Service (ab 119 €)</option>
-                      <option value="Sonstige Reparatur / Individuell">Sonstige Reparatur / Reifen / Bremsen</option>
-                    </select>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-mono font-bold uppercase text-slate-700 mb-1">Euer Name:</label>
-                      <input
-                        required
-                        type="text"
-                        placeholder="Vor- & Nachname"
-                        className="w-full border border-slate-300 rounded px-3 py-2 text-slate-900"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-mono font-bold uppercase text-slate-700 mb-1">Telefon / Mobil:</label>
-                      <input
-                        required
-                        type="tel"
-                        placeholder="08662 / ..."
-                        className="w-full border border-slate-300 rounded px-3 py-2 text-slate-900"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-mono font-bold uppercase text-slate-700 mb-1">E-Mail:</label>
-                      <input
-                        required
-                        type="email"
-                        placeholder="ihre.mail@beispiel.de"
-                        className="w-full border border-slate-300 rounded px-3 py-2 text-slate-900"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-mono font-bold uppercase text-slate-700 mb-1">Wunschdatum:</label>
-                      <input
-                        required
-                        type="date"
-                        className="w-full border border-slate-300 rounded px-3 py-2 text-slate-900"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-mono font-bold uppercase text-slate-700 mb-1">
-                      Fahrrad Modell & Besonderheiten:
-                    </label>
-                    <textarea
-                      rows={3}
-                      placeholder="z.B. Specialized Levo E-MTB, Geräusche an der Kette, Bremse entlüften..."
-                      className="w-full border border-slate-300 rounded px-3 py-2 text-slate-900"
-                    ></textarea>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-[#0056c6] hover:bg-[#0045a3] text-white font-race italic font-bold py-3.5 rounded text-lg uppercase tracking-wide shadow-md"
-                  >
-                    Werkstatt-Termin Verbindlich Anfragen
-                  </button>
-                </form>
-              )}
-            </div>
+      {/* PLATZ FÜR BUCHUNGSFORMULAR */}
+      <section id="buchungsformular" className="max-w-[100rem] mx-auto px-4 lg:px-8">
+        <div className="max-w-3xl mx-auto card p-8 md:p-12 space-y-6">
+          <div className="text-center space-y-2">
+            <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest">
+              Werkstatt-Termin vereinbaren
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight">
+              Online Buchungsanfrage
+            </h2>
+            <p className="text-zinc-600 text-sm">
+              Tragt eure Kontaktdaten und Wunschleistung ein. Wir bestätigen euren Termin zeitnah.
+            </p>
           </div>
-        </ScrollReveal>
+
+          {formSubmitted ? (
+            <div className="bg-emerald-50 border border-emerald-200 p-8 rounded-xl text-center space-y-3">
+              <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
+              <h3 className="text-xl font-bold text-emerald-900">Terminanfrage gesendet!</h3>
+              <p className="text-emerald-700 text-sm">
+                Vielen Dank! Wir haben eure Anfrage für "{selectedService}" erhalten und melden uns in Kürze.
+              </p>
+            </div>
+          ) : (
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                setFormSubmitted(true);
+              }}
+              className="space-y-4 pt-4"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold text-zinc-700 uppercase mb-1">Euer Name</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Vor- und Nachname"
+                    className="w-full px-4 py-2.5 rounded-lg border border-zinc-300 text-sm focus:outline-none focus:border-[#E6007E]"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-zinc-700 uppercase mb-1">E-Mail Adresse</label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="eure.email@beispiel.de"
+                    className="w-full px-4 py-2.5 rounded-lg border border-zinc-300 text-sm focus:outline-none focus:border-[#E6007E]"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold text-zinc-700 uppercase mb-1">Telefonnummer</label>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="08662 123456"
+                    className="w-full px-4 py-2.5 rounded-lg border border-zinc-300 text-sm focus:outline-none focus:border-[#E6007E]"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-zinc-700 uppercase mb-1">Gewünschter Service</label>
+                  <select
+                    value={selectedService}
+                    onChange={(e) => setSelectedService(e.target.value)}
+                    className="w-full px-4 py-2.5 rounded-lg border border-zinc-300 text-sm focus:outline-none focus:border-[#E6007E] bg-white"
+                  >
+                    <option value="Kleine Jahresinspektion">Kleine Jahresinspektion (69 €)</option>
+                    <option value="Grosse Jahresinspektion">Grosse Jahresinspektion (129 €)</option>
+                    <option value="E-Bike Service & Software-Update">E-Bike Service (99 €)</option>
+                    <option value="Fahrwerk & Dämpfer-Service">Fahrwerk-Service (ab 119 €)</option>
+                    <option value="Sonstige Reparatur">Sonstige Reparatur / Individualanfrage</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-zinc-700 uppercase mb-1">Fahrradmodell & Anmerkungen</label>
+                <textarea
+                  rows={4}
+                  placeholder="Welches Modell fahrt ihr? Beschreibt kurz euer Anliegen..."
+                  className="w-full px-4 py-2.5 rounded-lg border border-zinc-300 text-sm focus:outline-none focus:border-[#E6007E]"
+                ></textarea>
+              </div>
+
+              <div className="pt-2">
+                <button type="submit" className="primary-button w-full text-base">
+                  Werkstatt-Termin verbindlich anfragen
+                </button>
+              </div>
+            </form>
+          )}
+        </div>
       </section>
 
-      {/* WERKSTATT GALERIE */}
+      {/* BILDERGALERIE */}
       <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
-        <ScrollReveal variant="fade-blur">
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-4xl md:text-5xl font-race italic uppercase font-black text-slate-900">
-              EINBLICKE IN UNSERE <span className="text-[#0056c6]">MEISTERWERKSTATT</span>
-            </h2>
-          </div>
+        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+          <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest">
+            Einblicke in die Werkstatt
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+            Meisterhandwerk im Detail
+          </h2>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {galleryImages.map((g, idx) => (
-              <div key={idx} className="card rounded overflow-hidden border border-slate-200">
-                <img src={g.image} alt={g.title} className="w-full h-48 object-cover" />
-                <div className="p-3 bg-white font-mono text-xs font-bold text-slate-800">
-                  {g.title}
-                </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {galleryImages.map((img, i) => (
+            <div key={i} className="group relative rounded-xl overflow-hidden h-64 bg-zinc-100 shadow-sm">
+              <img
+                src={img.image}
+                alt={img.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent opacity-80"></div>
+              <div className="absolute bottom-4 left-4 right-4 text-white font-bold text-sm">
+                {img.title}
               </div>
-            ))}
-          </div>
-        </ScrollReveal>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );

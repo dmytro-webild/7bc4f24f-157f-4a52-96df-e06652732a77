@@ -1,143 +1,75 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Clock, ChevronRight } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a1324] text-white pt-16 pb-12 border-t-4 border-[#0056c6] bg-topo">
+    <footer className="bg-zinc-950 text-white pt-16 pb-12 border-t border-zinc-800">
       <div className="max-w-[100rem] mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Brand & About */}
-          <div className="space-y-4">
-            <div className="bg-[#0f1d38] text-white px-3 py-1.5 rounded border border-[#0056c6] font-extrabold italic tracking-tighter text-2xl font-race inline-flex items-center shadow-md">
-              <span>RADSPORT</span>
-              <span className="text-[#0056c6] ml-1.5">DERJUNG</span>
-              <span className="ml-2 bg-[#facc15] text-[#0a1324] text-xs px-1.5 py-0.5 rounded font-black tracking-normal not-italic">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-zinc-800">
+          {/* Brand */}
+          <div className="md:col-span-1 space-y-4">
+            <div className="flex items-center gap-2">
+              <span className="bg-[#E6007E] text-white font-extrabold text-xs px-2 py-1 rounded tracking-widest uppercase">
                 D74
               </span>
+              <span className="font-extrabold text-xl tracking-tight text-white">
+                Radsport Derjung
+              </span>
             </div>
-            <p className="text-slate-300 text-sm leading-relaxed">
-              Seit 1986 euer Fahrradladen mit Meisterwerkstatt in Bergen im Chiemgau. Wir leben Radsport – von High-End Rennrädern über E-MTB bis zur perfekten Wartung.
+            <p className="text-zinc-400 text-sm leading-relaxed">
+              Fahrradladen & Meisterwerkstatt in Bergen im Chiemgau. Euer Experte für Rennräder, Gravel, Mountainbikes und E-Bikes seit 1986.
             </p>
-            <div className="pt-2 flex items-center gap-3">
-              <span className="bg-slate-800 text-[#facc15] text-xs font-mono font-bold px-2.5 py-1 rounded border border-slate-700">
-                MEISTERBETRIEB D74
-              </span>
-              <span className="bg-slate-800 text-slate-300 text-xs font-mono px-2.5 py-1 rounded border border-slate-700">
-                EST. 1986
-              </span>
-            </div>
           </div>
 
-          {/* Quick Navigation */}
+          {/* Menü */}
           <div>
-            <h4 className="font-race italic text-xl font-bold uppercase tracking-wide text-white mb-4 border-b border-slate-800 pb-2">
-              Bikes & Shop
-            </h4>
-            <ul className="space-y-2 text-sm text-slate-300 font-sans">
-              <li>
-                <Link to="/bikes/rennrad" className="hover:text-[#facc15] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0056c6]" /> Rennräder & Aero-Boliden
-                </Link>
-              </li>
-              <li>
-                <Link to="/bikes/gravel" className="hover:text-[#facc15] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0056c6]" /> Gravelbikes Chiemgau Edition
-                </Link>
-              </li>
-              <li>
-                <Link to="/bikes/e-mtb" className="hover:text-[#facc15] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0056c6]" /> E-MTBs mit Bosch & Shimano
-                </Link>
-              </li>
-              <li>
-                <Link to="/bikes/premium" className="hover:text-[#facc15] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0056c6]" /> Premium Custom Bausätze
-                </Link>
-              </li>
-              <li>
-                <Link to="/shop" className="hover:text-[#facc15] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0056c6]" /> Ersatzteile & Helme Shop
-                </Link>
-              </li>
+            <h4 className="font-bold text-[#E6007E] text-sm uppercase tracking-wider mb-4">Navigation</h4>
+            <ul className="space-y-2.5 text-sm text-zinc-300">
+              <li><Link to="/" className="hover:text-[#E6007E] transition-colors">Home</Link></li>
+              <li><Link to="/wir" className="hover:text-[#E6007E] transition-colors">Wir</Link></li>
+              <li><Link to="/bikes" className="hover:text-[#E6007E] transition-colors">Bikes</Link></li>
+              <li><Link to="/werkstatt" className="hover:text-[#E6007E] transition-colors">Werkstatt</Link></li>
+              <li><Link to="/leasing" className="hover:text-[#E6007E] transition-colors">Leasing</Link></li>
+              <li><Link to="/shop" className="hover:text-[#E6007E] transition-colors">Shop</Link></li>
+              <li><Link to="/kontakt" className="hover:text-[#E6007E] transition-colors">Kontakt</Link></li>
             </ul>
           </div>
 
-          {/* Services & Leasing */}
+          {/* Impressionen */}
           <div>
-            <h4 className="font-race italic text-xl font-bold uppercase tracking-wide text-white mb-4 border-b border-slate-800 pb-2">
-              Leistungen
-            </h4>
-            <ul className="space-y-2 text-sm text-slate-300 font-sans">
-              <li>
-                <Link to="/werkstatt" className="hover:text-[#facc15] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0056c6]" /> Meisterwerkstatt & Inspektion
-                </Link>
-              </li>
-              <li>
-                <Link to="/leasing" className="hover:text-[#facc15] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0056c6]" /> Dienstrad Leasing (JobRad etc.)
-                </Link>
-              </li>
-              <li>
-                <Link to="/wir" className="hover:text-[#facc15] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0056c6]" /> Über uns & Zeitleiste
-                </Link>
-              </li>
-              <li>
-                <Link to="/team" className="hover:text-[#facc15] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0056c6]" /> Team Impressionen
-                </Link>
-              </li>
-              <li>
-                <Link to="/store" className="hover:text-[#facc15] flex items-center gap-1.5 transition-colors">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#0056c6]" /> Store & Bikestation Bergen
-                </Link>
-              </li>
+            <h4 className="font-bold text-[#E6007E] text-sm uppercase tracking-wider mb-4">Galerien</h4>
+            <ul className="space-y-2.5 text-sm text-zinc-300">
+              <li><Link to="/team" className="hover:text-[#E6007E] transition-colors">Team Impressionen</Link></li>
+              <li><Link to="/store" className="hover:text-[#E6007E] transition-colors">Store Impressionen</Link></li>
+              <li><Link to="/bikestation" className="hover:text-[#E6007E] transition-colors">Bikestation Impressionen</Link></li>
             </ul>
           </div>
 
-          {/* Contact & Hours */}
-          <div className="space-y-3">
-            <h4 className="font-race italic text-xl font-bold uppercase tracking-wide text-white mb-4 border-b border-slate-800 pb-2">
-              Kontakt & Zeiten
-            </h4>
-            <div className="text-sm space-y-2.5 text-slate-300">
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#facc15] shrink-0 mt-1" />
-                <span>Bahnhofstraße 12, 83346 Bergen im Chiemgau</span>
-              </div>
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#facc15] shrink-0" />
-                <a href="tel:+49866212345" className="hover:text-white transition-colors">08662 / 12345</a>
-              </div>
-              <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#facc15] shrink-0" />
-                <a href="mailto:info@radsport-derjung.de" className="hover:text-white transition-colors">info@radsport-derjung.de</a>
-              </div>
-              <div className="flex items-start gap-2.5 pt-1">
-                <Clock className="w-4 h-4 text-[#0056c6] shrink-0 mt-1" />
-                <div>
-                  <div className="font-semibold text-white">Öffnungszeiten:</div>
-                  <div className="text-xs text-slate-400">Di - Fr: 08:30 - 12:30 & 14:00 - 18:00</div>
-                  <div className="text-xs text-slate-400">Sa: 09:00 - 13:00 | Mo: Ruhetag</div>
-                </div>
-              </div>
-            </div>
+          {/* Kontakt Info */}
+          <div>
+            <h4 className="font-bold text-[#E6007E] text-sm uppercase tracking-wider mb-4">Kontakt & Adresse</h4>
+            <address className="not-italic text-sm text-zinc-300 space-y-2">
+              <p className="font-medium text-white">Radsport Derjung (D74)</p>
+              <p>Staudacherstraße 47</p>
+              <p>83346 Bergen im Chiemgau</p>
+              <p className="pt-2">Tel: <a href="tel:086626654476" className="hover:text-[#E6007E] transition-colors">08662 6654476</a></p>
+              <p>E-Mail: <a href="mailto:service@radsport-derjung.de" className="hover:text-[#E6007E] transition-colors">service@radsport-derjung.de</a></p>
+            </address>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
-          <div>
-            © {new Date().getFullYear()} Radsport Derjung (D74). Alle Rechte vorbehalten. Bergen im Chiemgau.
-          </div>
-          <div className="flex items-center gap-6">
-            <Link to="/legal" className="hover:text-[#facc15] transition-colors">
-              Impressum & Datenschutz
+        {/* Bottom Line */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
+          <p>
+            Staudacherstraße 47, 83346 Bergen · 08662 6654476 · service@radsport-derjung.de
+          </p>
+          <div className="flex items-center gap-6 font-medium">
+            <Link to="/legal" className="hover:text-[#E6007E] transition-colors">
+              Impressum
             </Link>
-            <Link to="/kontakt" className="hover:text-[#facc15] transition-colors">
-              Anfahrt & Kontakt
+            <span>·</span>
+            <Link to="/legal" className="hover:text-[#E6007E] transition-colors">
+              Datenschutz
             </Link>
           </div>
         </div>

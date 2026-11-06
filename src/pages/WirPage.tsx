@@ -1,154 +1,121 @@
 import React from 'react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { Award, Flag, Users, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function WirPage() {
   const timelineEvents = [
     {
       year: '1986',
-      bib: '#1986',
-      title: 'GRÜNDUNG IN BERGEN IM CHIEMGAU',
-      subtitle: 'Vom Rennfahrer-Werkstattraum zum Fachgeschäft',
-      desc: 'Hans Derjung gründet die Rennsportwerkstatt D74 in Bergen. Ursprünglich als reiner Speichen- & Rahmen-Service für regionale Straßenrennfahrer gedacht, wächst schnell die Nachfrage im gesamten Chiemgau.',
-      image: 'https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=800&q=80',
-      specs: ['Gründer: Hans Derjung', 'Fokus: Straßensport', 'Renncode: D74-BERGEN'],
+      title: 'Gründung in Bergen im Chiemgau',
+      desc: 'Hans Derjung gründet die Werkstatt D74 in Bergen. Was als leidenschaftlicher Service für lokale Rennfahrer begann, wuchs rasch zu einer festen Institution im Chiemgau.',
     },
     {
       year: '1995',
-      bib: '#1995',
-      title: 'ERWEITERUNG & MEISTERBRIEF',
-      subtitle: 'Offizielle Meisterwerkstatt D74',
-      desc: 'Neubau des heutigen Showrooms in der Bahnhofstraße Bergen. Erlangung des Zweiradmechanikermeister-Titels und Spezialisierung auf maßgeschneiderte Custom-Rennräder.',
-      image: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80',
-      specs: ['Meisterbetrieb seit 1995', 'Showroom: 350 m²', 'Custom Bausätze'],
+      title: 'Meisterbrief & Erweiterung',
+      desc: 'Mit dem Meisterbrief im Zweiradmechaniker-Handwerk und dem Neubau des Showrooms wird der Grundstein für hochspezialisierten Custom-Aufbau gelegt.',
     },
     {
       year: '2008',
-      bib: '#2008',
-      title: 'PIONIERARBEIT FÜR MOUNTAINBIKE & GRAVEL',
-      subtitle: 'Alpenüberquerung & Chiemgauer Trails',
-      desc: 'Aufnahme führender MTB- und Gravel-Marken. Radsport Derjung etabliert sich als erste Anlaufstelle für Alpenüberquerer und Trailbiker am Fuße des Hochfelln.',
-      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80',
-      specs: ['MTB Testcenter', 'Gravel Setup Lab', 'Trail-Guide Service'],
+      title: 'Gravel & Mountainbike Pionier',
+      desc: 'Erweiterung des Sortiments um führende MTB- und Gravelbike-Marken für die anspruchsvollen Strecken der Chiemgauer Alpen.',
     },
     {
       year: '2018',
-      bib: '#2018',
-      title: 'E-PERFORMANCE & LEASING D74',
-      subtitle: 'High-Tech Diagnose & Dienstrad-Zentrum',
-      desc: 'Erweiterung um moderne Bosch & Shimano Diagnosestationen. Radsport Derjung wird Premium-Partner von JobRad, Bikeleasing und BusinessBike für Gehaltsumwandlung.',
-      image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=800&q=80',
-      specs: ['JobRad Zertifikat', 'Bosch Smart System', 'E-MTB Spezialisten'],
+      title: 'E-Performance & Dienstrad-Leasing',
+      desc: 'Einführung von High-Tech Diagnosestationen für Bosch- und Shimano-Antriebe sowie Partnerschaften mit führenden Leasing-Anbietern.',
     },
     {
-      year: '2024',
-      bib: '#2024',
-      title: 'RADSPORT DERJUNG HEUTE',
-      subtitle: 'Tradition trifft modernstes Ergonomie- & Werkstatt-Lab',
-      desc: 'Über 38 Jahre Erfahrung. Wir verbinden Rennsport-DNA mit modernstem Bikefitting, Werkstatt-Präzision und familiärer Beratung für Biker aller Leistungsstufen.',
-      image: 'https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=800&q=80',
-      specs: ['38+ Jahre im Chiemgau', 'Meister-Werkstatt', '100% Kundenzufriedenheit'],
+      year: 'Heute',
+      title: 'Tradition & Moderne vereint',
+      desc: 'Seit fast 40 Jahren bieten wir euch persönliche Beratung, modernste Werkstatt-Technik und unbändige Begeisterung für den Radsport.',
     },
   ];
 
-  const teamMembers = [
+  const team = [
     {
       name: 'Hans Derjung',
-      role: 'Gründer & Zweirad-Meister',
-      exp: '38+ Jahre Radsporterfahrung',
-      desc: 'Ehemaliger Straßenrennfahrer. Hans ist Herz und Seele des Ladens. Er kennt jede Speiche und jede Steigung im Chiemgau.',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80',
-      fav: 'Custom Aero Rennrad & Hochfelln-Sprints',
+      role: 'Gründer & Zweiradmechaniker-Meister',
+      desc: 'Über 38 Jahre Erfahrung auf und neben der Rennstrecke. Hans berät euch mit fundierter Fachkenntnis und Leidenschaft.',
+      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80',
     },
     {
       name: 'Florian Derjung',
       role: 'Werkstattleiter & E-Bike Specialist',
-      exp: '14 Jahre Werkstattpraxis',
-      desc: 'Spezialist für elektronische Schaltungen (Di2, AXS), Bosch Diagnostik und komplexe Fahrwerksabstimmungen für MTB Fully.',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
-      fav: 'Enduro Fully & Chiemgau Gravel Trails',
+      desc: 'Experte für elektronische Schaltungen, Fahrwerksabstimmungen und Diagnostik moderner E-Bike-Systeme.',
+      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80',
     },
     {
-      name: 'Michael "Michi" Huber',
-      role: 'Bikefitting & Verkaufsberatung',
-      exp: 'Rennrad-Kaderfahrer',
-      desc: 'Michi passt euch das Rad ergonomisch perfekt an. Keine Knieschmerzen, kein Taubheitsgefühl – nur maximale Watt-Ausbeute.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
-      fav: 'Speed Rennrad Runden um den Chiemsee',
+      name: 'Michael Huber',
+      role: 'Verkaufsberatung & Bikefitting',
+      desc: 'Sorgt für das optimale Zusammenspiel von Ergonomie und Bike-Geometrie für beschwerdefreies Fahren.',
+      image: 'https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=800&q=80',
     },
   ];
 
   return (
-    <div className="space-y-20 pb-20">
+    <div className="space-y-24 pb-24 bg-white text-zinc-900">
       {/* HERO SECTION */}
-      <section className="bg-[#0a1324] text-white py-20 bg-topo border-b-4 border-[#0056c6]">
-        <div className="max-w-[100rem] mx-auto px-4 lg:px-8">
+      <section className="relative min-h-[50vh] flex items-center justify-center bg-zinc-900 text-white overflow-hidden py-20">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=2000&q=80"
+            alt="Über uns Radsport Derjung"
+            className="w-full h-full object-cover opacity-35"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10 max-w-[100rem] mx-auto px-4 lg:px-8 w-full text-center md:text-left">
           <ScrollReveal variant="slide-up">
             <div className="max-w-3xl space-y-4">
-              <div className="inline-flex items-center gap-2 bg-[#facc15] text-[#0a1324] px-3 py-1 rounded text-xs font-mono font-bold uppercase">
-                <Flag className="w-4 h-4" /> SEIT 1986 IN BERGEN IM CHIEMGAU
-              </div>
-              <h1 className="text-5xl md:text-7xl font-race italic uppercase font-extrabold leading-none text-white">
-                WIR SIND <span className="text-[#0056c6]">RADSPORT DERJUNG</span>
+              <span className="bg-[#E6007E] text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-sm inline-block">
+                Über Radsport Derjung
+              </span>
+              <h1 className="text-5xl md:text-7xl font-black tracking-tight text-white">
+                Wir über uns
               </h1>
-              <p className="text-slate-300 text-lg md:text-xl font-sans leading-relaxed">
-                Leidenschaft für Mechanik, Präzision im Detail und echte Chiemgauer Gastfreundschaft. Erfahrt hier alles über unsere Geschichte, unser Team und unsere Philosophie.
+              <p className="text-zinc-300 text-lg md:text-xl leading-relaxed">
+                Leidenschaft für Mechanik, Präzision im Detail und echte Beratung im Chiemgau seit 1986.
               </p>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* PHILOSOPHIE & PORTRÄT TEXT-BILD ABSCHNITT */}
+      {/* TEXT-BILD ABSCHNITTE */}
       <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
         <ScrollReveal variant="fade-blur">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative rounded overflow-hidden shadow-xl border border-slate-200">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative rounded-2xl overflow-hidden shadow-lg h-[500px]">
               <img
                 src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80"
-                alt="Werkstatt Derjung Bergen"
-                className="w-full h-[500px] object-cover"
+                alt="Werkstatt Bergen"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute bottom-4 left-4 right-4 bg-[#0a1324]/90 backdrop-blur-md p-4 rounded text-white border border-[#0056c6] flex justify-between items-center">
-                <div>
-                  <div className="font-race italic font-bold text-xl text-[#facc15] uppercase">
-                    MEISTERWERKSTATT D74 BERGEN
-                  </div>
-                  <div className="text-xs text-slate-300 font-mono">
-                    Qualität, Ehrlichkeit & Präzision seit 1986
-                  </div>
-                </div>
-                <span className="bg-[#0056c6] text-white text-xs font-mono px-2.5 py-1 rounded font-bold">
-                  D74 LAB
-                </span>
-              </div>
             </div>
 
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#0056c6] uppercase">
-                <Heart className="w-4 h-4 text-[#facc15]" /> UNSERE PHILOSOPHIE
-              </div>
-              <h2 className="text-4xl md:text-5xl font-race italic uppercase font-black text-slate-900 leading-tight">
-                "EIN FAHRRAD IST ERST PERFEKT, WENN ES <span className="text-[#0056c6]">ZU EUCH PASST"</span>
+              <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest">
+                Unsere Philosophie
+              </span>
+              <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+                Ein Fahrrad ist erst perfekt, wenn es zu euch passt.
               </h2>
-
-              <p className="text-slate-700 font-sans leading-relaxed">
-                Bei Radsport Derjung dreht sich alles darum, dass ihr auf jedem Kilometer Freude am Fahren habt. Wir sind keine anonymer Kettenhändler – wir sind leidenschaftliche Schrauber und Sportler aus Bergen im Chiemgau.
+              <p className="text-zinc-600 text-base leading-relaxed">
+                Bei Radsport Derjung geht es nicht nur um den Verkauf von Fahrrädern, sondern darum, dass ihr bei jeder Fahrt das beste Gefühl erlebt. Wir beraten euch ohne Hektik und gehen genau auf eure Wünsche und Anforderungen ein.
+              </p>
+              <p className="text-zinc-600 text-base leading-relaxed">
+                Ob sportlicher Rennradfahrer, Mountainbiker in den Chiemgauer Alpen oder Freizeitradler – wir unterstützen euch mit Fachkompetenz und Leidenschaft.
               </p>
 
-              <p className="text-slate-700 font-sans leading-relaxed">
-                Ob ihr eure ersten Runden um den Chiemsee drehen wollt, eine maßgeschneiderte Übersetzung für den Hochfelln sucht oder euer E-MTB für den nächsten Trail fit gemacht werden muss – wir beraten euch persönlich, kompetent und ohne Hektik.
-              </p>
-
-              <div className="grid grid-cols-2 gap-4 pt-2">
-                <div className="p-4 bg-white rounded border border-slate-200 shadow-sm">
-                  <div className="font-race italic font-extrabold text-2xl text-[#0056c6]">100% PERFEKTION</div>
-                  <div className="text-xs text-slate-600 font-sans mt-1">Jedes Bike wird vor der Übergabe von Meisterhand geprüft.</div>
+              <div className="grid grid-cols-2 gap-6 pt-4 border-t border-zinc-200">
+                <div>
+                  <div className="text-3xl font-black text-[#E6007E]">38+</div>
+                  <div className="text-xs font-bold text-zinc-500 uppercase tracking-wider mt-1">Jahre Erfahrung</div>
                 </div>
-                <div className="p-4 bg-white rounded border border-slate-200 shadow-sm">
-                  <div className="font-race italic font-extrabold text-2xl text-[#facc15]">CHIEMGAU DNA</div>
-                  <div className="text-xs text-slate-600 font-sans mt-1">Erprobte Setups für die Straßen & Trails der Region.</div>
+                <div>
+                  <div className="text-3xl font-black text-[#E6007E]">100%</div>
+                  <div className="text-xs font-bold text-zinc-500 uppercase tracking-wider mt-1">Meisterwerkstatt</div>
                 </div>
               </div>
             </div>
@@ -156,126 +123,93 @@ export default function WirPage() {
         </ScrollReveal>
       </section>
 
-      {/* ZEITLEISTE MIT STARTNUMMERN */}
-      <section className="bg-white py-20 border-y border-slate-200">
+      {/* PORTRÄT / TEAM ABSCHNITT */}
+      <section className="bg-zinc-50 py-20 border-y border-zinc-200">
         <div className="max-w-[100rem] mx-auto px-4 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#0056c6] uppercase tracking-wider mb-2">
-              <Award className="w-4 h-4 text-[#facc15]" /> CHIEMGAU RACE HISTORY
-            </div>
-            <h2 className="text-4xl md:text-6xl font-race italic uppercase font-black text-slate-900">
-              UNSERE ZEITLEISTE <span className="text-[#0056c6]">(STARTNUMMERN)</span>
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest">
+              Porträts & Mannschaft
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+              Eure Ansprechpartner in Bergen
             </h2>
-            <p className="text-slate-600 font-sans text-base mt-2">
-              Verfolgt die wichtigsten Etappen von Radsport Derjung seit 1986 im Stil von klassischen Startnummern.
+            <p className="text-zinc-600 text-sm md:text-base">
+              Hinter Radsport Derjung steht ein engagiertes Team von Radsportlern und Technikern.
             </p>
           </div>
 
-          <div className="space-y-12">
-            {timelineEvents.map((item, index) => (
-              <ScrollReveal key={item.year} variant="slide-up">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#f4f7fa] p-6 md:p-10 rounded border border-slate-200 hover:border-[#0056c6] transition-colors">
-                  {/* Startnummer Bib Column */}
-                  <div className="lg:col-span-3 flex justify-center">
-                    <div className="startnummer-badge w-48 h-56 p-6 flex flex-col justify-between items-center text-center">
-                      <div className="text-2xs font-mono uppercase text-slate-500">STAGE NO. 0{index + 1}</div>
-                      <div className="text-5xl font-extrabold text-[#0a1324] font-race italic">{item.bib}</div>
-                      <div className="w-full bg-[#0056c6] text-white py-1 text-xs font-mono font-bold uppercase rounded">
-                        JAHR {item.year}
-                      </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {team.map((member) => (
+              <div key={member.name} className="card overflow-hidden flex flex-col">
+                <div className="relative h-80 overflow-hidden bg-zinc-100">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold">{member.name}</h3>
+                    <div className="text-xs font-bold text-[#E6007E] uppercase tracking-wider mt-0.5">
+                      {member.role}
                     </div>
-                  </div>
-
-                  {/* Content Column */}
-                  <div className="lg:col-span-6 space-y-3">
-                    <div className="text-xs font-mono font-bold text-[#0056c6] uppercase">{item.subtitle}</div>
-                    <h3 className="text-3xl font-race italic uppercase font-black text-slate-900">{item.title}</h3>
-                    <p className="text-slate-700 font-sans text-sm md:text-base leading-relaxed">{item.desc}</p>
-
-                    <div className="flex flex-wrap gap-2 pt-2">
-                      {item.specs.map((s) => (
-                        <span key={s} className="bg-white border border-slate-300 text-slate-700 text-xs font-mono px-2.5 py-1 rounded">
-                          {s}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Image Column */}
-                  <div className="lg:col-span-3">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-48 object-cover rounded border border-slate-300 shadow-sm"
-                    />
+                    <p className="text-zinc-600 text-sm mt-3 leading-relaxed">
+                      {member.desc}
+                    </p>
                   </div>
                 </div>
-              </ScrollReveal>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* TEAM PORTRÄT ABSCHNITT */}
+      {/* ZEITLEISTE */}
       <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
-        <ScrollReveal variant="fade-blur">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#0056c6] uppercase tracking-wider mb-2">
-              <Users className="w-4 h-4 text-[#facc15]" /> DIE MENSCHEN HINTER D74
-            </div>
-            <h2 className="text-4xl md:text-6xl font-race italic uppercase font-black text-slate-900">
-              UNSER TEAM IN <span className="text-[#0056c6]">BERGEN</span>
-            </h2>
-            <p className="text-slate-600 font-sans text-base mt-2">
-              Kompetenz, Leidenschaft und ein offenes Ohr für eure Wünsche. Wir bringen euch aufs Rad.
-            </p>
-          </div>
+        <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest">
+            Geschichte & Meilensteine
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+            Unsere Zeitleiste
+          </h2>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {teamMembers.map((m) => (
-              <div key={m.name} className="card rounded overflow-hidden border border-slate-200 flex flex-col justify-between">
-                <div className="relative h-72 overflow-hidden bg-slate-900">
-                  <img
-                    src={m.image}
-                    alt={m.name}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#0a1324] text-[#facc15] text-xs font-mono font-bold px-2.5 py-1 rounded border border-[#0056c6]">
-                    {m.exp}
-                  </div>
+        <div className="max-w-4xl mx-auto space-y-8">
+          {timelineEvents.map((item) => (
+            <ScrollReveal key={item.year} variant="slide-up">
+              <div className="flex flex-col md:flex-row gap-6 p-8 bg-white border border-zinc-200 rounded-xl hover:border-[#E6007E] transition-colors shadow-sm">
+                <div className="md:w-32 shrink-0">
+                  <span className="text-3xl font-black text-[#E6007E] block">
+                    {item.year}
+                  </span>
                 </div>
-
-                <div className="p-6 bg-white space-y-3 flex-grow flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-2xl font-race italic uppercase font-extrabold text-slate-900">
-                      {m.name}
-                    </h3>
-                    <div className="text-xs font-mono font-bold text-[#0056c6] uppercase mb-2">
-                      {m.role}
-                    </div>
-                    <p className="text-slate-600 text-sm font-sans leading-relaxed">
-                      {m.desc}
-                    </p>
-                  </div>
-
-                  <div className="pt-3 border-t border-slate-100 text-xs font-mono text-slate-500">
-                    <span className="font-bold text-[#0a1324]">Lieblingsstrecke:</span> {m.fav}
-                  </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold text-zinc-900">{item.title}</h3>
+                  <p className="text-zinc-600 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </div>
-            ))}
-          </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
 
-          {/* Link to Team Impressionen */}
-          <div className="text-center pt-10">
-            <Link
-              to="/team"
-              className="inline-flex items-center gap-2 bg-[#0056c6] hover:bg-[#0045a3] text-white px-8 py-3.5 rounded font-race italic font-bold uppercase text-lg shadow-md"
-            >
-              Mehr Team Impressionen ansehen
+      {/* CTA */}
+      <section className="max-w-[100rem] mx-auto px-4 lg:px-8 text-center pt-8">
+        <div className="bg-zinc-950 text-white rounded-2xl p-12 space-y-6">
+          <h2 className="text-3xl md:text-5xl font-black tracking-tight">
+            Besucht uns in Bergen im Chiemgau
+          </h2>
+          <p className="text-zinc-300 max-w-xl mx-auto text-sm md:text-base">
+            Kommt vorbei und lasst euch persönlich beraten oder vereinbart einen Termin für eure Probefahrt.
+          </p>
+          <div className="pt-2">
+            <Link to="/kontakt" className="primary-button text-base">
+              Jetzt Kontakt aufnehmen
             </Link>
           </div>
-        </ScrollReveal>
+        </div>
       </section>
     </div>
   );
