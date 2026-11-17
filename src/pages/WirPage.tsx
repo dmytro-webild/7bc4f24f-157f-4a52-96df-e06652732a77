@@ -262,7 +262,7 @@ export default function WirPage() {
               <div className="lg:col-span-5">
                 <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-sm bg-zinc-200">
                   <img
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=80"
+                    src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794900876005-hah9r7g8.png"
                     alt="Markus Derjung Inhaber"
                     className="w-full h-full object-cover"
                   />
