@@ -238,7 +238,7 @@ export default function WerkstattPage() {
           <ScrollReveal variant="slide-up">
             <div className="relative w-full aspect-[21/9] rounded-[24px] overflow-hidden shadow-2xl bg-zinc-100 border border-zinc-200">
               <img
-                src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=2000&q=80"
+                src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1793971539113-d1rk0nag.png"
                 alt="Meisterwerkstatt Radsport Derjung"
                 className="w-full h-full object-cover"
               />
