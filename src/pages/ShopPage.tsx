@@ -63,7 +63,7 @@ export default function ShopPage() {
               </p>
               <div className="pt-4">
                 <a
-                  href="https://shop.radsport-derjung.de"
+                  href="https://radsport-derjung.shop"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="primary-button text-base inline-flex items-center gap-2"
@@ -115,7 +115,7 @@ export default function ShopPage() {
 
                 <div className="pt-4 border-t border-zinc-100">
                   <a
-                    href="https://shop.radsport-derjung.de"
+                    href="https://radsport-derjung.shop"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="secondary-button w-full text-center text-sm inline-flex items-center justify-center gap-2"
@@ -141,7 +141,7 @@ export default function ShopPage() {
           </p>
           <div className="pt-2">
             <a
-              href="https://shop.radsport-derjung.de"
+              href="https://radsport-derjung.shop"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button text-base inline-flex items-center gap-2"
