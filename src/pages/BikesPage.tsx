@@ -36,7 +36,7 @@ export default function BikesPage() {
       title: 'Premium Bikes',
       badge: 'Custom Aufbauten',
       heroText: 'Individuelle Meisterstücke auf Maß. Wir fertigen euer Traum-Bike mit handverlesenen High-End Komponenten, maßgeschneiderter Ergonomie und unverwechselbarem Design.',
-      image: 'https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1600&q=80',
+      image: 'https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794901262267-zk2vz7vi.png',
       models: [
         {
           id: 'p1',
