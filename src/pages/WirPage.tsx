@@ -89,7 +89,7 @@ export default function WirPage() {
                 Seit 1986 dreht sich alles ums Rad
               </h1>
               <p className="text-zinc-600 text-lg md:text-xl leading-relaxed pt-2 max-w-3xl">
-                Aus den ersten Schülerrennen wurde eine Leidenschaft und daraus ein Familienbetrieb mit Laden und Werkstatt in Bergen.
+                DIESE SEITE BEFINDET SICH NOCH IM UMBAU!!!
               </p>
             </div>
           </ScrollReveal>
