@@ -202,7 +202,7 @@ export default function WirPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="relative aspect-[4/3] rounded-[24px] overflow-hidden shadow-sm bg-zinc-100">
                 <img
-                  src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80"
+                  src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794900826336-b80yej6b.png"
                   alt="Betreuung und Service bei Radsport Derjung"
                   className="w-full h-full object-cover"
                 />
