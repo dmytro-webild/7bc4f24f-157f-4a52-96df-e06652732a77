@@ -97,7 +97,7 @@ export default function WirPage() {
           <ScrollReveal variant="fade-blur" delay={150}>
             <div className="mt-10 relative aspect-[21/9] rounded-[24px] overflow-hidden shadow-sm bg-zinc-100">
               <img
-                src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794900941481-6b6neh6g.png"
+                src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794906426078-ens4f5yd.jpg"
                 alt="D74 Radsport Derjung seit 1986"
                 className="w-full h-full object-cover"
               />
