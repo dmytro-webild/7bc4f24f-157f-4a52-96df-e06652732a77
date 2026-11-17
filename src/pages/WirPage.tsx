@@ -7,7 +7,7 @@ export default function WirPage() {
   const timelineEvents = [
     {
       year: '1986 (März)',
-      desc: 'Erste Radrennen in der Schülerklasse, danach aktive Laufbahn auf Straße, Bahn und Mountainbike.                                           Nebenbei immer in Radgeschäften geholfen.',
+      desc: 'Erste Radrennen in der Schülerklasse, danach aktive Laufbahn  auf Straße, Bahn und Mountainbike.',
       isCurrent: false,
     },
     {
