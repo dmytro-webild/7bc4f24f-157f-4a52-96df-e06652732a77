@@ -15,7 +15,7 @@ export default function Header() {
   };
 
   const bikeCategories = [
-    { name: 'A', path: '/bikes', desc: 'Ü' },
+    { name: 'Alle Bikes', path: '/bikes', desc: '' },
     { name: 'Premium Bikes', path: '/bikes/premium', desc: 'High-End Custom Aufbauten' },
     { name: 'Rennrad', path: '/bikes/rennrad', desc: 'Speed & Endurance' },
     { name: 'Gravel', path: '/bikes/gravel', desc: 'Freiheit auf Schotter & Asphalt' },
