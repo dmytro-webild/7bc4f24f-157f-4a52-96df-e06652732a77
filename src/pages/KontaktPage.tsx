@@ -12,7 +12,7 @@ export default function KontaktPage() {
       <section className="relative min-h-[50vh] flex items-center justify-center bg-zinc-900 text-white overflow-hidden py-20">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=2000&q=80"
+            src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794902953078-bked991j.avif"
             alt="Kontakt Radsport Derjung"
             className="w-full h-full object-cover opacity-35"
           />
