@@ -156,7 +156,7 @@ export default function BikesPage() {
       title: 'E-MTB',
       badge: 'Power Support',
       heroText: 'Erreicht neue Höhen ohne Kompromisse. Starke Antriebe von Bosch und Shimano liefern die Power für lange Touren und steilste Anstiege.',
-      image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=1600&q=80',
+      image: 'https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794901467684-rszix03h.jpg',
       models: [
         {
           id: 'e1',
