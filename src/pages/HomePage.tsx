@@ -668,7 +668,7 @@ export default function HomePage() {
               <div className="lg:col-span-5">
                 <div className="aspect-[4/3] lg:aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg bg-white border border-zinc-200">
                   <img
-                    src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=1200&q=80"
+                    src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794902627000-wbtd0hr6.png"
                     alt="Dienstrad Leasing Radsport Derjung"
                     className="w-full h-full object-cover"
                   />
