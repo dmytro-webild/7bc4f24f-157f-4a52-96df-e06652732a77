@@ -156,8 +156,8 @@ export default function HomePage() {
                 <div className="text-xs text-zinc-500 mt-1 uppercase font-semibold tracking-wider">Erfahrung im Chiemgau</div>
               </div>
               <div className="bg-zinc-50 p-5 rounded-[20px] border border-zinc-200/80">
-                <div className="text-3xl font-extrabold text-[#E6007E]">100% Meister</div>
-                <div className="text-xs text-zinc-500 mt-1 uppercase font-semibold tracking-wider">Hauseigene Werkstatt</div>
+                <div className="text-3xl font-extrabold text-[#E6007E]">Service, Reparatur,...</div>
+                <div className="text-xs text-zinc-500 mt-1 uppercase font-semibold tracking-wider">Service, Reparatur,...</div>
               </div>
             </div>
           </div>
