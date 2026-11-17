@@ -337,6 +337,61 @@ export default function BikesPage() {
         </div>
       </section>
 
+      {/* MODELL RASTER */}
+      <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <span className="text-[#E6007E] font-bold text-xs uppercase tracking-widest block mb-2">
+              Modellauswahl
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+              Modelle in dieser Kategorie
+            </h2>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {currentData.models.map((model) => (
+            <div key={model.id} className="card overflow-hidden flex flex-col">
+              <div className="relative h-80 bg-zinc-100 overflow-hidden">
+                <img
+                  src={model.image}
+                  alt={model.name}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-4 right-4 bg-white text-zinc-900 px-4 py-1.5 rounded-full text-sm font-black shadow">
+                  {model.price}
+                </div>
+              </div>
+
+              <div className="p-8 space-y-6 flex-grow flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="text-xs font-bold text-[#E6007E] uppercase tracking-wider">
+                    {model.category}
+                  </div>
+                  <h3 className="text-2xl font-bold text-zinc-900">{model.name}</h3>
+                  <div className="bg-zinc-50 p-4 rounded-lg border border-zinc-200 text-xs text-zinc-600 space-y-2 font-mono">
+                    <div><strong className="text-zinc-900">Rahmen:</strong> {model.frame}</div>
+                    <div><strong className="text-zinc-900">Schaltung:</strong> {model.groupset}</div>
+                    <div><strong className="text-zinc-900">Gewicht:</strong> {model.weight}</div>
+                    <div className="text-[#E6007E] font-bold"><strong className="text-zinc-900">Highlight:</strong> {model.highlight}</div>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <button
+                    onClick={() => handleOpenModal(model.name)}
+                    className="primary-button w-full text-sm"
+                  >
+                    Probefahrt anfragen
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* PROBEFAHRT MODAL */}
       {modalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
