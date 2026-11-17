@@ -130,7 +130,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-lg md:text-xl text-zinc-600 max-w-2xl leading-relaxed font-normal">
-                Rennrad, Gravel, Mountainbike und E-MTB. Beratung und Service von Radsportlern, die seit 1986 im Sattel sitzen.
+                Rennrad, Gravel, Mountainbike und E-MTB. Beratung und Service von Radsportlern, die seit 1986 im Sattel sitzen. 
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
