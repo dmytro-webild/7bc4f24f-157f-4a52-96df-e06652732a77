@@ -67,7 +67,7 @@ export default function LeasingPage() {
       <section className="relative min-h-[50vh] flex items-center justify-center bg-zinc-900 text-white overflow-hidden py-20">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=2000&q=80"
+            src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1793971463627-8758or4o.jpg"
             alt="Dienstrad Leasing Radsport Derjung"
             className="w-full h-full object-cover opacity-35"
           />
