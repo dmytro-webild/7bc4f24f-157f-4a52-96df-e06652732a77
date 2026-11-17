@@ -66,12 +66,12 @@ export default function WirPage() {
     {
       title: 'Store Impressionen',
       link: '/store',
-      image: 'https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=1000&q=80',
+      image: 'https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794900941481-6b6neh6g.png',
     },
     {
       title: 'Bikestation Impressionen',
       link: '/bikestation',
-      image: 'https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=1000&q=80',
+      image: 'https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794906055702-x16i7zrb.jpg',
     },
   ];
 
