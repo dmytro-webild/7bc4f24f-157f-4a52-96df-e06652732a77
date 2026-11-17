@@ -151,14 +151,14 @@ export default function Header() {
               Leasing
             </Link>
 
-            <Link
-              to="/shop"
-              className={`py-1 transition-colors ${
-                isActive('/shop') ? 'text-[#E6007E] font-bold border-b-2 border-[#E6007E]' : 'text-zinc-800 hover:text-[#E6007E]'
-              }`}
+            <a
+              href="https://radsport-derjung.shop"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-1 transition-colors text-zinc-800 hover:text-[#E6007E]"
             >
               Shop
-            </Link>
+            </a>
 
             <Link
               to="/kontakt"
@@ -263,13 +263,15 @@ export default function Header() {
               Leasing
             </Link>
 
-            <Link
-              to="/shop"
+            <a
+              href="https://radsport-derjung.shop"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-1 text-zinc-900 hover:text-[#E6007E]"
             >
               Shop
-            </Link>
+            </a>
 
             <Link
               to="/kontakt"

@@ -65,7 +65,7 @@ export default function WirPage() {
     },
     {
       title: 'Store Impressionen',
-      link: '/shop',
+      link: '/store',
       image: 'https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=1000&q=80',
     },
     {

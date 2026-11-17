@@ -32,7 +32,7 @@ export default function Footer() {
               <li><Link to="/bikes" className="hover:text-[#E6007E] transition-colors">Bikes</Link></li>
               <li><Link to="/werkstatt" className="hover:text-[#E6007E] transition-colors">Werkstatt</Link></li>
               <li><Link to="/leasing" className="hover:text-[#E6007E] transition-colors">Leasing</Link></li>
-              <li><Link to="/shop" className="hover:text-[#E6007E] transition-colors">Shop</Link></li>
+              <li><a href="https://radsport-derjung.shop" target="_blank" rel="noopener noreferrer" className="hover:text-[#E6007E] transition-colors">Shop</a></li>
               <li><Link to="/kontakt" className="hover:text-[#E6007E] transition-colors">Kontakt</Link></li>
             </ul>
           </div>
