@@ -155,7 +155,7 @@ export default function BikesPage() {
     'e-mtb': {
       title: 'E-MTB',
       badge: 'Power Support',
-      heroText: 'Erreicht neue Höhen ohne Kompromisse. Starke Antriebe von Bosch und Shimano liefern die Power für lange Touren und steilste Anstiege.',
+      heroText: 'Erreicht neue Höhen ohne Kompromisse. Starke Antriebe von Bosch und Avinox liefern die Power für lange Touren und steilste Anstiege.',
       image: 'https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794901467684-rszix03h.jpg',
       models: [
         {
