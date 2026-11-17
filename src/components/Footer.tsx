@@ -8,10 +8,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-zinc-800">
           {/* Brand */}
           <div className="md:col-span-1 space-y-4">
-            <div className="flex items-center gap-2">
-              <span className="bg-[#E6007E] text-white font-extrabold text-xs px-2 py-1 rounded tracking-widest uppercase">
-                
-              </span>
+            <div className="flex items-center gap-3">
+              <img
+                src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794903043999-m29fskzi.jpg"
+                alt="D74 Logo"
+                className="w-10 h-10 object-contain rounded-lg bg-white p-0.5 shadow-sm"
+              />
               <span className="font-extrabold text-xl tracking-tight text-white">
                 Radsport Derjung
               </span>
