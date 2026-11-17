@@ -60,7 +60,7 @@ export default function WirPage() {
   const impressions = [
     {
       title: 'Team Impressionen',
-      link: '#team',
+      link: '/team',
       image: 'https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794900826336-b80yej6b.png',
     },
     {
@@ -78,7 +78,7 @@ export default function WirPage() {
   return (
     <div className="bg-white text-zinc-900 min-h-screen">
       {/* 1. KOPFSECTION */}
-      <section className="pt-12 pb-16 md:pt-16 md:pb-24">
+      <section id="hero" data-section="hero" className="pt-12 pb-16 md:pt-16 md:pb-24">
         <div className="w-content-width mx-auto px-4 lg:px-8">
           <ScrollReveal variant="slide-up">
             <div className="max-w-4xl space-y-3">
@@ -89,7 +89,7 @@ export default function WirPage() {
                 Seit 1986 dreht sich alles ums Rad
               </h1>
               <p className="text-zinc-600 text-lg md:text-xl leading-relaxed pt-2 max-w-3xl">
-                DIESE SEITE BEFINDET SICH NOCH IM UMBAU!!!
+                Aus den ersten Schülerrennen wurde eine Leidenschaft und daraus ein Familienbetrieb mit Laden und Werkstatt in Bergen.
               </p>
             </div>
           </ScrollReveal>
@@ -107,7 +107,7 @@ export default function WirPage() {
       </section>
 
       {/* 2. UNSERE GESCHICHTE (ZEITSTRAHL) */}
-      <section className="py-16 md:py-24 border-t border-zinc-100">
+      <section id="geschichte" data-section="geschichte" className="py-16 md:py-24 border-t border-zinc-100">
         <div className="w-content-width mx-auto px-4 lg:px-8">
           <ScrollReveal variant="slide-up">
             <h2 className="text-4xl md:text-5xl font-black tracking-tight text-center text-zinc-950 mb-16 md:mb-20">
@@ -176,7 +176,7 @@ export default function WirPage() {
       </section>
 
       {/* 3. HELLGRAUER ABSCHNITT (ZITAT & TEXT) */}
-      <section className="py-20 bg-zinc-100">
+      <section id="zitat" data-section="zitat" className="py-20 bg-zinc-100">
         <div className="w-content-width mx-auto px-4 lg:px-8">
           <ScrollReveal variant="fade-blur">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -196,7 +196,7 @@ export default function WirPage() {
       </section>
 
       {/* 4. BILD LINKS, TEXT RECHTS (BETREUUNG UND SERVICE) */}
-      <section className="py-20 md:py-28">
+      <section id="service" data-section="service" className="py-20 md:py-28">
         <div className="w-content-width mx-auto px-4 lg:px-8">
           <ScrollReveal variant="fade-blur">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -229,7 +229,7 @@ export default function WirPage() {
       </section>
 
       {/* 5. TEXT LINKS, BILD RECHTS (NÄHE ZUR INDUSTRIE) */}
-      <section className="py-20 md:py-28 border-t border-zinc-100">
+      <section id="industrie" data-section="industrie" className="py-20 md:py-28 border-t border-zinc-100">
         <div className="w-content-width mx-auto px-4 lg:px-8">
           <ScrollReveal variant="fade-blur">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -254,7 +254,7 @@ export default function WirPage() {
       </section>
 
       {/* 6. HELLGRAU: PORTRÄT MARKUS DERJUNG */}
-      <section id="team" className="py-20 md:py-28 bg-zinc-100">
+      <section id="inhaber" data-section="inhaber" className="py-20 md:py-28 bg-zinc-100">
         <div className="w-content-width mx-auto px-4 lg:px-8">
           <ScrollReveal variant="fade-blur">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -318,7 +318,7 @@ export default function WirPage() {
       </section>
 
       {/* 7. IMPRESSIONEN */}
-      <section className="py-20 md:py-28">
+      <section id="impressionen" data-section="impressionen" className="py-20 md:py-28">
         <div className="w-content-width mx-auto px-4 lg:px-8">
           <ScrollReveal variant="slide-up">
             <h2 className="text-4xl md:text-5xl font-black tracking-tight text-center text-zinc-950 mb-12 md:mb-16">
@@ -356,7 +356,7 @@ export default function WirPage() {
       </section>
 
       {/* 8. ABSCHLUSS */}
-      <section className="py-20 md:py-28 border-t border-zinc-100 bg-zinc-50/50">
+      <section id="abschluss" data-section="abschluss" className="py-20 md:py-28 border-t border-zinc-100 bg-zinc-50/50">
         <div className="w-content-width mx-auto px-4 lg:px-8 text-center">
           <ScrollReveal variant="slide-up">
             <div className="max-w-3xl mx-auto space-y-8">
