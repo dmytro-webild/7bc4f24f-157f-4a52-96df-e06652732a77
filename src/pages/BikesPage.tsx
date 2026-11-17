@@ -96,7 +96,7 @@ export default function BikesPage() {
       title: 'Gravel',
       badge: 'All-Terrain',
       heroText: 'Vom Teer direkt auf die Forstwege im Chiemgau. Vielseitig, stabil und komfortabel für Tagestouren, Bikepacking und Abenteuer.',
-      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1600&q=80',
+      image: 'https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794901388485-1xiklvm4.jpg',
       models: [
         {
           id: 'g1',
