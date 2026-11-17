@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="md:col-span-1 space-y-4">
             <div className="flex items-center gap-2">
               <span className="bg-[#E6007E] text-white font-extrabold text-xs px-2 py-1 rounded tracking-widest uppercase">
-                D74
+                
               </span>
               <span className="font-extrabold text-xl tracking-tight text-white">
                 Radsport Derjung
@@ -49,7 +49,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-[#E6007E] text-sm uppercase tracking-wider mb-4">Kontakt & Adresse</h4>
             <address className="not-italic text-sm text-zinc-300 space-y-2">
-              <p className="font-medium text-white">Radsport Derjung (D74)</p>
+              <p className="font-medium text-white">Radsport Derjung ()</p>
               <p>Staudacherstraße 47</p>
               <p>83346 Bergen im Chiemgau</p>
               <p className="pt-2">Tel: <a href="tel:086626654476" className="hover:text-[#E6007E] transition-colors">08662 6654476</a></p>
