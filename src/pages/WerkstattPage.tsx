@@ -156,6 +156,40 @@ export default function WerkstattPage() {
     },
   ];
 
+  // 6. Einblicke Galerie (6 Photos, mixed wide and portrait)
+  const galleryPhotos = [
+    {
+      url: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80',
+      caption: 'Präzisionsarbeit am Werkstattplatz',
+      gridClass: 'col-span-1 md:col-span-2 aspect-[16/10]',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=1000&q=80',
+      caption: 'Spezialwerkzeug & Feinmechanik',
+      gridClass: 'col-span-1 aspect-[3/4]',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=1000&q=80',
+      caption: 'Laufradbau & Zentrierständer',
+      gridClass: 'col-span-1 aspect-[3/4]',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=1200&q=80',
+      caption: 'Fahrwerksservice & Abstimmung',
+      gridClass: 'col-span-1 md:col-span-2 aspect-[16/10]',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1200&q=80',
+      caption: 'High-End Custom Aufbauten',
+      gridClass: 'col-span-1 md:col-span-2 aspect-[16/10]',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=1000&q=80',
+      caption: 'Qualitätskontrolle vor Abgabe',
+      gridClass: 'col-span-1 aspect-[3/4]',
+    },
+  ];
+
   return (
     <div className="bg-white text-zinc-950 font-sans selection:bg-[#E6007E] selection:text-white space-y-16 md:space-y-24 pb-20">
       
@@ -585,6 +619,46 @@ export default function WerkstattPage() {
 
           </div>
         </div>
+      </section>
+
+
+      {/* =========================================================
+          6. EINBLICKE (BILDERGALERIE MIT 6 FOTOS)
+         ========================================================= */}
+      <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
+        <ScrollReveal variant="fade-blur">
+          <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#E6007E]">
+              Impressionen
+            </span>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-zinc-950 tracking-tight">
+              Einblicke
+            </h2>
+            <p className="text-zinc-600 text-base">
+              Ein Blick in unsere Werkstatt – Präzision, Leidenschaft und Liebe zum Detail.
+            </p>
+          </div>
+
+          {/* Grid mit 6 Fotos, gemischt breit und hochkant */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {galleryPhotos.map((photo, i) => (
+              <div
+                key={i}
+                className={`group relative rounded-[24px] overflow-hidden bg-zinc-100 shadow-md border border-zinc-200/80 ${photo.gridClass}`}
+              >
+                <img
+                  src={photo.url}
+                  alt={photo.caption}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/70 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                <div className="absolute bottom-5 left-5 right-5 text-white font-extrabold text-base tracking-tight">
+                  {photo.caption}
+                </div>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
       </section>
 
     </div>
