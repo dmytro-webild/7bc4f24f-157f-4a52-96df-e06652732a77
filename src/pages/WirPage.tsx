@@ -243,7 +243,7 @@ export default function WirPage() {
               </div>
               <div className="relative aspect-[4/3] rounded-[24px] overflow-hidden shadow-sm bg-zinc-100 order-1 lg:order-2">
                 <img
-                  src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80"
+                  src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794900850597-co1bxouz.png"
                   alt="Zusammenarbeit mit CUBE und Events"
                   className="w-full h-full object-cover"
                 />
