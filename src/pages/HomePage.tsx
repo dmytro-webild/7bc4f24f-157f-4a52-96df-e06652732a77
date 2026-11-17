@@ -454,7 +454,7 @@ export default function HomePage() {
               >
                 <div className="relative h-64 overflow-hidden bg-zinc-100">
                   <img
-                    src="https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=900&q=80"
+                    src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794901812188-2nupne5i.jpg"
                     alt="Mountainbikes"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
