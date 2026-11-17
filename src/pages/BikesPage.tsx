@@ -208,7 +208,7 @@ export default function BikesPage() {
     {
       num: '04',
       title: 'Meisterwerkstatt & Erstinspektion',
-      desc: 'Jedes Bike verlässt unseren Laden betriebsbereit eingestellt. Die erste Inspektion nach 500km ist inklusive.',
+      desc: 'Jedes Bike verlässt unseren Laden betriebsbereit eingestellt. ',
     },
   ];
 
