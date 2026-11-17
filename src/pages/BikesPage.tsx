@@ -65,7 +65,7 @@ export default function BikesPage() {
     rennrad: {
       title: 'Rennrad',
       badge: 'Aero & Speed',
-      heroText: 'Für schnelle Runden um den Chiemsee und anspruchsvolle Anstiege am Hochfelln. Perfekte Aerodynamik, Leichtgewicht und kompromisslose Effizienz.',
+      heroText: 'Für schnelle Runden um den Chiemsee und anspruchsvolle Anstiege im Alpenland. Perfekte Aerodynamik, Leichtgewicht und kompromisslose Effizienz.',
       image: 'https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794901322545-f1l849zv.jpg',
       models: [
         {
