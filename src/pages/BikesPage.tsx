@@ -207,8 +207,8 @@ export default function BikesPage() {
     },
     {
       num: '04',
-      title: 'Meisterwerkstatt & Erstinspektion',
-      desc: 'Jedes Bike verlässt unseren Laden betriebsbereit eingestellt. ',
+      title: 'Werkstatt ',
+      desc: 'Jedes Bike verlässt unseren Laden betriebsbereit eingestellt. Zum Service oder bei Problemen kann man jederzeit vorbei kommen.',
     },
   ];
 
