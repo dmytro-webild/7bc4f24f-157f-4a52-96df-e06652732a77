@@ -386,7 +386,7 @@ export default function HomePage() {
               >
                 <div className="relative h-80 sm:h-96 overflow-hidden bg-zinc-100">
                   <img
-                    src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=1200&q=80"
+                    src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794901836545-47kc262q.jpg"
                     alt="Rennrad"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
