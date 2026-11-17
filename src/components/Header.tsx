@@ -34,11 +34,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-zinc-200/80 transition-all">
       <div className="max-w-[100rem] mx-auto px-4 lg:px-8 py-3.5 flex items-center justify-between gap-4">
         {/* Left: Logo + Status Badge */}
-        <div className="flex items-center gap-4">
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <span className="bg-[#E6007E] text-white font-extrabold text-xs px-2.5 py-1 rounded-full tracking-wider uppercase shadow-sm">
-              D74
-            </span>
+        <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 group">
+            <img
+              src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794903043999-m29fskzi.jpg"
+              alt="D74 Logo"
+              className="w-10 h-10 md:w-11 md:h-11 object-contain rounded-lg border border-zinc-200/80 bg-white p-0.5 shadow-sm group-hover:scale-105 transition-transform"
+            />
             <span className="font-extrabold text-lg md:text-xl tracking-tight text-zinc-950 group-hover:text-[#E6007E] transition-colors">
               Radsport Derjung
             </span>
