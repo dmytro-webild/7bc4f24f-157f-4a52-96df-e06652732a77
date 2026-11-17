@@ -126,7 +126,7 @@ export default function BikesPage() {
       title: 'Mountainbikes',
       badge: 'Trail & Enduro',
       heroText: 'Eure Waffe für alpine Trails, Wurzelpassagen und steile Mountainbike-Strecken. Maximale Kontrolle und Schluckfreudiges Fahrwerk.',
-      image: 'https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=1600&q=80',
+      image: 'https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794901418571-aujzg8v7.jpg',
       models: [
         {
           id: 'm1',
