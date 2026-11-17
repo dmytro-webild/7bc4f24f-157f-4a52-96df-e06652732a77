@@ -5,16 +5,16 @@
 
 :root {
   /* Radsport Derjung Clean Theme Tokens */
-  --background: #030128;
-  --card: #241f48;
-  --foreground: #ffffff;
-  --primary-cta: #ffffff;
-  --primary-cta-text: #030128;
-  --secondary-cta: #131136;
-  --secondary-cta-text: #d5d4f6;
-  --accent: #44358a;
+  --background: #ffffff;
+  --card: #ffffff;
+  --foreground: #09090b;
+  --primary-cta: #E6007E;
+  --primary-cta-text: #ffffff;
+  --secondary-cta: #09090b;
+  --secondary-cta-text: #ffffff;
+  --accent: #E6007E;
   --accent-hover: #c4006b;
-  --background-accent: #b597fe;
+  --background-accent: #f4f4f5;
 
   /* @layout/border-radius/rounded */
   --radius: 1.5rem;
