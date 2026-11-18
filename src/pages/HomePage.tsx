@@ -569,7 +569,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white space-y-1">
                   <span className="bg-[#E6007E] text-white text-xs font-bold px-3 py-1 rounded-full uppercase">
-                    Hauseigenes Service-Center
+                    Hauseigene Premium Werkstatt
                   </span>
                   <div className="text-xl font-bold">Meisterliche Präzision</div>
                 </div>
@@ -630,7 +630,7 @@ export default function HomePage() {
                 <div>
                   <div className="font-extrabold text-sm text-zinc-950">Werkstatt-Öffnungszeiten</div>
                   <div className="text-xs text-zinc-700 mt-0.5">
-                    Montag bis Freitag: 09:00 – 18:00 Uhr | Samstag: 09:00 – 14:00 Uhr
+                    Mittwoch bis Freitag: 14:00 – 18:00 Uhr 
                   </div>
                 </div>
               </div>
