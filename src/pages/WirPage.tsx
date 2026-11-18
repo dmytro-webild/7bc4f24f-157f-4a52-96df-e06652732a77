@@ -212,7 +212,7 @@ export default function WirPage() {
                   Betreuung und Service
                 </h2>
                 <p className="text-zinc-600 text-lg md:text-xl leading-relaxed">
-                  Service und Beratung auch für Bikes, die nicht bei uns gekauft wurden.
+                  Service und Beratung - alles Rund um dein Traumrad
                 </p>
                 <div className="pt-2">
                   <Link
@@ -281,7 +281,7 @@ export default function WirPage() {
                 </div>
 
                 <p className="text-zinc-600 text-base md:text-lg leading-relaxed">
-                  Mit über 35 Jahren Erfahrung im Radsport verbindet Markus handwerkliche Präzision mit echter Begeisterung. Als gelernter Feinmechaniker sammelte er nach der Ausbildung unter anderem wertvolle Erfahrungen als Profimechaniker bei SG/EC Bayer Köln Worringen in der Radbundesliga. Von 1999 bis 2010 führte er erfolgreich eigene Bikestationen auf Mallorca. Seit 2010 betreibt er seinen eigenen Laden – erst in Marquartstein, heute in Bergen – inzwischen gemeinsam mit seinem Sohn Xaver in zweiter Generation.
+                  Mit über 35 Jahren Erfahrung im Radsport verbindet Markus handwerkliche Präzision mit echter Begeisterung. Als gelernter Feinmechaniker sammelte er nach der Ausbildung unter anderem wertvolle Erfahrungen als Profimechaniker bei SG/EC Bayer Köln Worringen in der Radbundesliga. Von 1999 bis 2010 führte er erfolgreich eigene Bikestationen auf Mallorca & im Zillertal. Seit 2010 betreibt er seinen eigenen Laden erst in Marquartstein, heute in Bergen inzwischen gemeinsam mit seinem Sohn Xaver in zweiter Generation.
                 </p>
 
                 {/* 3 pinke Zahlen */}
