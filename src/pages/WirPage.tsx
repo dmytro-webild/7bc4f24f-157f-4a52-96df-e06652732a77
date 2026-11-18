@@ -7,7 +7,7 @@ export default function WirPage() {
   const timelineEvents = [
     {
       year: '1986 (März)',
-      desc: 'Erste Radrennen in der Schülerklasse, danach aktive Laufbahn  auf Straße, Bahn und Mountainbike.',
+      desc: 'Erste Radrennen in der Schülerklasse, danach aktive Laufbahn auf Straße, Bahn und Mountainbike.',
       isCurrent: false,
     },
     {
@@ -66,12 +66,12 @@ export default function WirPage() {
     {
       title: 'Store Impressionen',
       link: '/store',
-      image: 'https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794900941481-6b6neh6g.png',
+      image: 'https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=1000&q=80',
     },
     {
       title: 'Bikestation Impressionen',
       link: '/bikestation',
-      image: 'https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794906055702-x16i7zrb.jpg',
+      image: 'https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=1000&q=80',
     },
   ];
 
@@ -97,7 +97,7 @@ export default function WirPage() {
           <ScrollReveal variant="fade-blur" delay={150}>
             <div className="mt-10 relative aspect-[21/9] rounded-[24px] overflow-hidden shadow-sm bg-zinc-100">
               <img
-                src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794906426078-ens4f5yd.jpg"
+                src="https://storage.googleapis.com/webild/users/user_3LjUWTZsUqfgaeVmEkCmQhyVehx/uploaded-1794900941481-6b6neh6g.png"
                 alt="D74 Radsport Derjung seit 1986"
                 className="w-full h-full object-cover"
               />
