@@ -304,7 +304,7 @@ export default function WirPage() {
                   </div>
                   <div>
                     <div className="text-3xl lg:text-4xl font-black text-[#E6007E]">
-                      11 Jahre
+                      12 Jahre
                     </div>
                     <div className="text-sm font-bold text-zinc-700 mt-1">
                       Bikestationen
