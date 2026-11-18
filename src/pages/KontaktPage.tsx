@@ -39,7 +39,7 @@ export default function KontaktPage() {
       {/* MAIN CONTENT GRID */}
       <section className="max-w-[100rem] mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Kontaktdaten & Öffnungszeiten */}
+          {/* Kontaktdaten & Öffnungszeiten Winter */}
           <div className="lg:col-span-5 space-y-8">
             {/* Kontaktdaten */}
             <div className="card p-8 space-y-6">
@@ -79,11 +79,11 @@ export default function KontaktPage() {
               </div>
             </div>
 
-            {/* Öffnungszeiten */}
+            {/* Öffnungszeiten Winter */}
             <div className="card p-8 space-y-4">
               <div className="flex justify-between items-center border-b border-zinc-100 pb-3">
                 <h2 className="text-2xl font-bold text-zinc-900">
-                  Öffnungszeiten
+                  Öffnungszeiten Winter
                 </h2>
                 <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
                   Geöffnet
@@ -92,15 +92,15 @@ export default function KontaktPage() {
 
               <div className="space-y-3 text-sm text-zinc-600">
                 <div className="flex justify-between py-1 border-b border-zinc-100">
-                  <span className="font-medium text-zinc-800">Dienstag – Freitag</span>
-                  <span>08:30 – 12:30 & 14:00 – 18:00</span>
+                  <span className="font-medium text-zinc-800">Mittwoch – Freitag</span>
+                  <span> 14:00 – 18:00</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-zinc-100">
                   <span className="font-medium text-zinc-800">Samstag</span>
-                  <span>09:00 – 13:00</span>
+                  <span>09:30 – 12:00</span>
                 </div>
                 <div className="flex justify-between py-1">
-                  <span className="font-medium text-zinc-800">Montag & Sonntag</span>
+                  <span className="font-medium text-zinc-800">Montag &amp; Dienstag</span>
                   <span className="text-zinc-400 font-medium">Ruhetag</span>
                 </div>
               </div>
