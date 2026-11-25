@@ -110,7 +110,7 @@ export default function KontaktPage() {
           {/* Formular */}
           <div className="lg:col-span-7 card p-8 md:p-10 space-y-6">
             <h2 className="text-2xl font-bold text-zinc-900 border-b border-zinc-100 pb-3">
-              Nachricht senden
+              Leider funktioniert dieses Tool momentan nicht, wir bitten dies zu entschuldiegen! Schreib uns gerne über dein Mailprogramm, an service@radsport-derjung.de                                DANKE :)   
             </h2>
 
             {submitted ? (
